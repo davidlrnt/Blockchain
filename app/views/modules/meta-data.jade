@@ -81,7 +81,7 @@ script.
   /* Control which analytics libraries are loaded */
   window._analytics =  !{JSON.stringify(content.analytics)}
 
-script(src='//console.ng.bluemix.net/analytics/build/bluemix-analytics.js')
+//script(src='//console.ng.bluemix.net/analytics/build/bluemix-analytics.js')
 = "\n"
 <!-- END - Bluemix Custom Naming and Analytics -->
 
@@ -139,29 +139,28 @@ if(content.javascript && content.javascript != "")
   = "\n\n"
 
 script.
-    var wow = new WOW({ boxClass: 'wow', animateClass: 'animated', offset: 0, mobile: false, live: true  }).init();
+    //var wow = new WOW({ boxClass: 'wow', animateClass: 'animated', offset: 0, mobile: false, live: true  }).init();
 
-      IBMCore.common.util.config.set({
-        sbs: { enabled: false },
-        masthead: {
-        type: "",
-          //  type: "alternate",
-          search:{
-            enabled: true
-          }
-        },
+    IBMCore.common.util.config.set({
+      sbs: { enabled: false },
+      masthead: {
+      type: "alternate",
+        search:{
+          enabled: true
+        }
+      },
 
-        footermenu:{ enabled:true },
-        localeselector:{ enabled: true },
-        footer: {
-          enabled: true,
-          //  type: "alternate",
-          socialLinks: {
-            enabled: true
-          },
+      footermenu:{ enabled:true },
+      localeselector:{ enabled: true },
+      footer: {
+        enabled: true,
+        //  type: "alternate",
+        socialLinks: {
+          enabled: true
         },
-        scrolltracker:{ enabled: true }
-      });
+      },
+      scrolltracker:{ enabled: true }
+    });
 
 
 = "\n\n"

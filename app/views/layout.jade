@@ -42,29 +42,31 @@ html(lang="en")
                   +tabV18(tab, (path.indexOf(tab.href) > -1))
           - var parallax = (content.leadspace.parallax) ? "parallaxscroll" : ""
           if(content.leadspace.leadspaceimg != undefined)
-            - var leadstyle = (content.leadspaceimg) ? "background-color:#20343e;  background-image: url(" + content.leadspaceimg + ")" : "background-color:#20343e; background-image: url(" + content.leadspace.leadspaceimg + ");background-position: center center;background-size: cover;";
+            - var leadstyle = (content.leadspaceimg) ? "background-color:#00b0d9;  background-image: url(" + content.leadspaceimg + ")" : "background-color:#00b0d9; background-image: url(" + content.leadspace.leadspaceimg + ");background-position: center center;background-size: cover;";
           else
             - var leadstyle = content.leadspace.background
-          - var breadcrumbsStyle = (content.leadspace.breadcrumbsStyle) ? content.leadspace.breadcrumbsStyle : ""
+            - var breadcrumbsStyle = (content.leadspace.breadcrumbsStyle) ? content.leadspace.breadcrumbsStyle : ""
+          - var breadcrumbsClass = (content.breadcrumbsClass) ? content.breadcrumbsClass : "ibm-textcolor-white-core"
           - var customLeadspace = (content.leadspace.is_custom)
           if(!content.leadspace.hidden)
             #ibm-leadspace-head.ibm-padding-top-1(style=leadstyle class=content.section_color data-widget="#{parallax}")&attributes( (customLeadspace) ? {"class":"bluemix-custom-leadspace "} : {"class":"ibm-padding-bottom-r1"})
-              nav(role="navigation", aria-label="Breadcrumbs")
-                ul#ibm-navigation-trail.ibm-padding-bottom-0(style=" "+breadcrumbsStyle)
-                  li(itemscope, itemtype="http://data-vocabulary.org/Breadcrumb")
-                    a(href="//www.ibm.com/", itemprop="url" style=" "+breadcrumbsStyle)
-                      span.ibm-textcolor-gray-30(itemprop="title" style=" "+breadcrumbsStyle) IBM
-                  li(itemscope, itemtype="http://data-vocabulary.org/Breadcrumb")
-                    a(href="/blockchain/index.html", itemprop="url" style=" "+breadcrumbsStyle)
-                      span.ibm-textcolor-gray-30(itemprop="title" style=" "+breadcrumbsStyle) Blockchain
-                  if content.breadcrumbs
-                    each val, index in content.breadcrumbs
-                      li(itemscope, itemtype="http://data-vocabulary.org/Breadcrumb")
-                        a(href="#{val.url}", itemprop="url" style=" "+breadcrumbsStyle)
-                          if(val.url == 'javascript: void(0);')
-                            span.ibm-textcolor-gray-30(itemprop="title" style=" "+breadcrumbsStyle)=val.label
-                          else
-                              span.ibm-textcolor-gray-30(itemprop="title" style=" "+breadcrumbsStyle)=val.label
+              if (content.breadcrumbsEnabled)
+                nav(role="navigation", aria-label="Breadcrumbs")
+                  ul#ibm-navigation-trail.ibm-padding-bottom-0(style=" "+breadcrumbsStyle)
+                    li(itemscope, itemtype="http://data-vocabulary.org/Breadcrumb", class=breadcrumbsClass)
+                      a(href="//www.ibm.com/", itemprop="url" style=" "+breadcrumbsStyle)
+                        span.ibm-textcolor-white-core(itemprop="title" style=" "+breadcrumbsStyle) IBM
+                    li(itemscope, itemtype="http://data-vocabulary.org/Breadcrumb", class=breadcrumbsClass)
+                      a(href="/blockchain/index.html", itemprop="url" style=" "+breadcrumbsStyle)
+                        span.ibm-textcolor-white-core(itemprop="title" style=" "+breadcrumbsStyle) Blockchain
+                    if content.breadcrumbs
+                      each val, index in content.breadcrumbs
+                        li(itemscope, itemtype="http://data-vocabulary.org/Breadcrumb", class=breadcrumbsClass)
+                          a(href="#{val.url}", itemprop="url" style=" "+breadcrumbsStyle)
+                            if(val.url == 'javascript: void(0);')
+                              span.ibm-textcolor-white-core(itemprop="title" style=" "+breadcrumbsStyle)=val.label
+                            else
+                                span.ibm-textcolor-white-core(itemprop="title" style=" "+breadcrumbsStyle)=val.label
               if (customLeadspace)
                 if (content.leadspace.is_custom)
                   +#{content.leadspace.temp}(content.leadspace)

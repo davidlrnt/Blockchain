@@ -1,6 +1,8 @@
 
 - var features_enabled = (content.leadspace.features.enabled) ? true : false
 - var video_enabled = (content.leadspace.leadspace_video.enabled) ? true : false
+- var social = (content.leadspace.social.enabled) ? true : false
+- var customClass = (content.leadspace.class)
 
 #ibm-leadspace-body.ibm-padding-top-1.ibm-padding-bottom-r1
   if !content.is_index
@@ -23,9 +25,9 @@
 
     if !features_enabled && !video_enabled
       //- Tier 2 centered view
-      .ibm-columns.ibm-alternate-background.ibm-padding-top-2.ibm-padding-bottom-0(style="postition:relative" data-widget="parallax")
+      .ibm-columns.ibm-alternate-background.ibm-padding-top-2.ibm-padding-bottom-0(style="position:relative" data-widget="parallax")
         //- .ibm-col-6-4.ibm-center-block.ibm-center.wow.fadeIn
-        .ibm-col-6-4.ibm-center-block.ibm-center.wow.fadeIn
+        .ibm-col-6-4.wow.fadeIn(class=customClass)
           h1.ibm-h1.ibm-light= content.leadspace.header
             if content.is_index
               h2.ibm-h2= content.leadspace.subhead
@@ -62,9 +64,9 @@
             h5.ibm-h5= content.leadspace.subhead
             p.ibm-button-link.ibm-btn-row
               if (content.leadspace.primary_cta.cta.onClick)
-                a.ibm-btn-pri.ibm-btn-blue-30(class=(content.leadspace.primary_cta.cta._class) ? "#{content.leadspace.primary_cta.cta._class}" : "" href="#{content.leadspace.primary_cta.cta.href}" onclick="#{content.leadspace.primary_cta.cta.onClick}"  )= content.leadspace.primary_cta.cta.text
+                a.ibm-btn-pri.ibm-btn-blue-50(class=(content.leadspace.primary_cta.cta._class) ? "#{content.leadspace.primary_cta.cta._class}" : "" href="#{content.leadspace.primary_cta.cta.href}" onclick="#{content.leadspace.primary_cta.cta.onClick}"  )= content.leadspace.primary_cta.cta.text
               else
-                a.ibm-btn-pri.ibm-btn-blue-30(class=(content.leadspace.primary_cta.cta._class) ? "#{content.leadspace.primary_cta.cta._class}" : "" href="#{content.leadspace.primary_cta.cta.href}" )= content.leadspace.primary_cta.cta.text
+                a.ibm-btn-pri.ibm-btn-blue-50(class=(content.leadspace.primary_cta.cta._class) ? "#{content.leadspace.primary_cta.cta._class}" : "" href="#{content.leadspace.primary_cta.cta.href}" )= content.leadspace.primary_cta.cta.text
           .ibm-col-6-2.ibm-col-medium-4-2
             div.ibm-video-player-con(data-videodisplay="inline", data-widget="videoplayer", data-customplaceholder="true", data-showvideoduration="false",data-showvideotitle="false")&attributes({"data-videoid":videoId, "data-videotype":videoType, "href":videoUrl})
               div
@@ -73,16 +75,43 @@
                   img.ibm-resize(alt="", src=videoImg, target="_blank")
   else
     //- Tier 1 homepage view
-    .ibm-columns.ibm-padding-top-2.ibm-padding-bottom-1(style="postition:relative" data-widget="parallax")
-      .ibm-col-5-2.ibm-col-large-6-3.ibm-col-medium-6-4.wow.fadeIn
+    .ibm-columns.ibm-alternate-background.ibm-padding-top-2.ibm-padding-bottom-1(style="position:relative" data-widget="parallax")
+      .ibm-col-5-3.ibm-col-large-6-3.ibm-col-medium-6-4.wow.fadeIn(class=customClass)
           h1#ibm-pagetitle-h1.ibm-h1.ibm-light.ibm-medium= content.leadspace.header
             if content.is_index
               h3.ibm-h3.ibm-light= content.leadspace.subhead
             else
               p= content.leadspace.subhead
-          p.ibm-button-link.ibm-padding-top-1.ibm-btn-row
-            if (content.leadspace.primary_cta.cta.onClick)
-              a.ibm-btn-pri.ibm-btn-blue-30(class=(content.leadspace.primary_cta.cta._class) ? "#{content.leadspace.primary_cta.cta._class}" : "" href="#{content.leadspace.primary_cta.cta.href}" onclick="#{content.leadspace.primary_cta.cta.onClick}" )= content.leadspace.primary_cta.cta.text
-            else
-              a.ibm-btn-pri.ibm-btn-blue-30(class=(content.leadspace.primary_cta.cta._class) ? "#{content.leadspace.primary_cta.cta._class}" : "" href="#{content.leadspace.primary_cta.cta.href}" )= content.leadspace.primary_cta.cta.text
-      .ibm-col-5-3.ibm-col-medium-6-2
+          if (content.leadspace.primary_cta.enabled)
+            p.ibm-button-link.ibm-padding-top-1.ibm-btn-row
+              if (content.leadspace.primary_cta.cta.onClick)
+                a.ibm-btn-pri.ibm-btn-blue-50(class=(content.leadspace.primary_cta.cta._class) ? "#{content.leadspace.primary_cta.cta._class}" : "" href="#{content.leadspace.primary_cta.cta.href}" onclick="#{content.leadspace.primary_cta.cta.onClick}" )= content.leadspace.primary_cta.cta.text
+              else
+                a.ibm-btn-pri.ibm-btn-blue-50(class=(content.leadspace.primary_cta.cta._class) ? "#{content.leadspace.primary_cta.cta._class}" : "" href="#{content.leadspace.primary_cta.cta.href}" )= content.leadspace.primary_cta.cta.text
+if social
+  #ibm-leadspace-social
+    .ibm-columns
+      .ibm-col-1-1
+        .ibm-leadspace-social-links
+          div
+            p.ibm-textcolor-white-core Follow IBM
+            p.ibm-ind-link.ibm-alternate
+              a.ibm-twitter-encircled-link(href='http://www.twitter.com/ibm', target='blank')
+                span Follow us on Twitter
+              a.ibm-linkedin-encircled-link(href='http://www.linkedin.com/company/ibm', target='blank')
+                span Join us on Linkedin
+              a.ibm-facebook-encircled-link(href='http://www.facebook.com/ibm', target='blank')
+                span Visit our Facebook page
+              a.ibm-youtube-encircled-link(href='http://www.youtube.com/ibm', target='blank')
+                span Watch our YouTube channel
+
+  //.ibm-columns.leadspace-social-container
+    .ibm-col-6-4
+    .ibm-col-6-2.leadspace-social
+      div(style="float:right;")
+        p Follow IBM
+        p.ibm-icononly.ibm-alternate
+          a.ibm-twitter-encircled-link(href="#") Visit us on Twitter
+          a.ibm-linkedin-encircled-link(href="#") Visit u videos Linkedin
+          a.ibm-facebook-encircled-link(href="#") Visit us on Facebook
+          a.ibm-youtube-encircled-link(href="#") Visit us on Youtube

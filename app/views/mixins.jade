@@ -14,7 +14,7 @@ mixin worldMap(obj)
 
 
 
-mixin cards(obj)
+mixin ibmCarousel(obj)
   -var data = obj.content
 
   div(class=data.class style=data.background)
@@ -206,6 +206,41 @@ mixin featuredTiles(obj)
                 span.ibm-icon-nolink.ibm-forward-link
               p.ibm-textcolor-white-core=tile.copy
 
+//- featured tiles with video
+mixin featuredTilesVideo(obj)
+  if(obj.content.type == "case-study")
+  .ibm-columns.ibm-textcolor-black-core
+    .ibm-col-6-3.ibm-padding-top-1
+      h1.ibm-h1.ibm-light !{obj.header}
+    .ibm-col-6-3
+      if (obj.content.cta)
+        +cta(obj.content.cta)
+  div(class="#{obj.content.classes}" style="overflow:hidden")
+    section.co-wrapper-tile
+      - var bg_l = obj.content.featured.bg ? "background-image:url(" + obj.content.featured.bg + ")" : ""
+      - var video = obj.content.featured.video
+      a.co-tile.co-tile-1.bg-image-cover(style=bg_l data-overlayplayersize="large" data-widget="videoplayer" data-videodisplay=video.display data-videoid=video.id data-videotype=video.type data-showvideoduration="true" href=video.url)
+        .co-tile-content
+          .co-tile-content-bottom.ibm-textcolor-white-core
+            p.ibm-light !{obj.content.featured.category}
+            h2.ibm-h2 !{obj.content.featured.title}
+              span.ibm-icon-nolink.ibm-forward-link
+            p!=obj.content.featured.copy
+        if(video.timeStamp)
+          .ibm-video-timestamp !{video.timeStamp}
+    section.co-wrapper-tile
+      for tile, i in obj.content.small
+        - var bg_s = tile.bg_sm ? "background-image:url(" + tile.bg_sm + ")" : ""
+        a.co-tile(style=bg_s data-overlayplayersize="large" data-widget="videoplayer" data-videodisplay=tile.video.display data-videoid=tile.video.id data-videotype=tile.video.type data-showvideoduration="true" href=tile.video.url class="#{tile.classes}")
+          .co-tile-content
+            .co-tile-content-bottom
+              p.ibm-textcolor-white-core.ibm-light
+                span=tile.category
+              h2.ibm-h2.ibm-textcolor-white-core !{tile.title}
+                span.ibm-icon-nolink.ibm-forward-link
+              p.ibm-textcolor-white-core !{tile.copy}
+          if(tile.video.timeStamp)
+            .ibm-video-timestamp !{tile.video.timeStamp}
 
 
 
@@ -297,6 +332,19 @@ mixin ctagroup(obj)
  mixin text(obj)
    if(typeof obj === "object")
      p(class=obj.class style=obj.style) !{obj.text}
+   else
+     p !{obj}
+     
+ mixin pullQuote(obj)
+   if(typeof obj === "object")
+     .ibm-pull-quote(class=obj.class style=obj.style)
+       blockquote
+         p
+           em
+             span.ibm-pullquote-open &#8220;
+             !{obj.text}
+             span.ibm-pullquote-close &#8221;
+         p(class=obj.source.class style=obj.source.style) !{obj.source.text}
    else
      p !{obj}
 
@@ -509,46 +557,51 @@ mixin videoBand(obj)
 
 
 mixin cardContent(c)
-  if(c.eyebrow)
-    +eyebrow(c.eyebrow)
-  if(c.icon)
-    +icon(c.icon)
-  if(c.image)
-    +image(c.image)
-  if(c.video)
-    +video(c.video)
-  if(c.headline || c.subhead || c.subheadh4 || c.text)
-    div(class="ibm-card__content ibm-padding-bottom-1")
-      if(c.headline)
-        +headline(c.headline)
-      if(c.subhead)
-        +subhead(c.subhead)
-      if(c.subheadh4)
-        +subheadh4(c.subheadh4)
-      if(c.text)
-        +text(c.text)
-    if(c.cta)
-      div(class="ibm-card__bottom")
-        +cta(c.cta)
+ if(c.eyebrow)
+   +eyebrow(c.eyebrow)
+ if(c.icon)
+   +icon(c.icon)
+ if(c.image)
+   +image(c.image)
+ if(c.video)
+   +video(c.video)
+ if(c.headline || c.subhead || c.subheadh4 || c.text || c.eyebrowInCardContent || c.pullQuote)
+   div(class="ibm-card__content ibm-padding-bottom-1")
+     if(c.eyebrowInCardContent)
+       +eyebrow(c.eyebrowInCardContent)
+     if(c.headline)
+       +headline(c.headline)
+     if(c.subhead)
+       +subhead(c.subhead)
+     if(c.subheadh4)
+       +subheadh4(c.subheadh4)
+     if(c.text)
+       +text(c.text)
+     if(c.pullQuote)
+       +pullQuote(c.pullQuote)
+   if(c.cta)
+     div(class="ibm-card__bottom")
+       +cta(c.cta)
+   if(c.ctagroup)
+     div(class="ibm-card__bottom")
+       +ctagroup(c.ctagroup)
 
 
 mixin card(obj)
 
-  if(obj instanceof Array)
-    div(data-widget="setsameheight" data-items=".ibm-card" class="ibm-columns ibm-cards ibm-textcolor-black-core")
-      for c in obj
-        .wow.fadeIn(class=c.class)
-          div(class="ibm-card ibm-center #{c.borderColor}" style=c.style)
-            +cardContent(c)
+ if(obj instanceof Array)
+   div(data-widget="setsameheight" data-items=".ibm-card" class="ibm-columns ibm-cards ibm-textcolor-black-core")
+     for c in obj
+       .wow.fadeIn()&attributes( (c.class) ? {'class':c.class} : {'class':''})
+         .ibm-card.ibm-center()&attributes( (c.style) ? {'style':c.style} : {'style':''})
+           +cardContent(c)
 
-  else
-    div(data-widget="setsameheight" data-items="> div > div" class="ibm-columns ibm-cards ibm-textcolor-black-core")
-      for c in obj.card
-        .wow.fadeIn(class=obj.class)
-          div(class=(c.class!=undefined)?"ibm-card ibm-center #{c.class}":"ibm-card ibm-center" style="#{obj.style} "+c.style)
-            +cardContent(c)
-
-
+ else
+   div(data-widget="setsameheight" data-items=".ibm-card" class="ibm-columns ibm-cards ibm-textcolor-black-core")
+     for c in obj.card
+       div( class="wow fadeIn" )&attributes( (obj.class) ? {'class':obj.class} : {'class':''})
+         div(class=(c.class!=undefined)?"ibm-card  #{c.class}":"ibm-card " style="#{obj.style} "+c.style)
+           +cardContent(c)
 
 
 
@@ -632,3 +685,178 @@ mixin tabV18(data, active)
      else
        li(role="presentation")
          a(role="menuitem" href=data.href aria-label=data.label onclick="#{data.onClick}")=data.label
+
+mixin bluemixTable
+  .ibm-band.ibm-padding-top-3.ibm-padding-bottom-1.ibm-background-white-core
+      .ibm-columns
+          .ibm-col-1-1.ibm-center.ibm-padding-bottom-2
+              h2.ibm-h2="Blockchain Landscape"
+              p 25 words Lorem ipsum dolor. Sit amet pede. Ipsum nam mauris. Morbi in sit augue risus sem nam est scelerisque. Explicabo vel luctus sodales quis ipsum et.
+          .ibm-col-1-1.bluemix-table
+            table.ibm-col-1-1.bluemix-table
+              thead
+                  tr
+                      th Features
+                      td Title A
+                      td Title A
+                      td Title A
+                      td Title A
+              tbody
+                  tr
+                      th Feature Name
+                      td
+                        img(src="/images/bullet-check.svg" width="25")
+                      td
+                        img(src="/images/bullet-check.svg" width="25")
+                      td
+                        img(src="/images/bullet-check.svg" width="25")
+                      td
+                        img(src="/images/bullet-check.svg" width="25")
+                  tr
+                      th Feature Name
+                      td
+                        img(src="/images/bullet-check.svg" width="25")
+                      td
+                        img(src="/images/bullet-check.svg" width="25")
+                      td
+                        img(src="/images/bullet-check.svg" width="25")
+                      td
+                        img(src="/images/bullet-check.svg" width="25")
+                  tr
+                      th Feature Name
+                      td
+                        img(src="/images/bullet-check.svg" width="25")
+                      td
+                        img(src="/images/bullet-check.svg" width="25")
+                      td
+                        img(src="/images/bullet-check.svg" width="25")
+                      td
+                        img(src="/images/bullet-check.svg" width="25")
+                    tr
+                        th Feature Name
+                        td
+                          img(src="/images/bullet-check.svg" width="25")
+                        td
+                          img(src="/images/bullet-check.svg" width="25")
+                        td
+                          img(src="/images/bullet-check.svg" width="25")
+                        td
+                          img(src="/images/bullet-check.svg" width="25")
+                    tr
+                        th Feature Name
+                        td
+                          img(src="/images/bullet-check.svg" width="25")
+                        td
+                          img(src="/images/bullet-check.svg" width="25")
+                        td
+                          img(src="/images/bullet-check.svg" width="25")
+                        td
+                          img(src="/images/bullet-check.svg" width="25")
+                    tr
+                        th Feature Name
+                        td
+                          img(src="/images/bullet-check.svg" width="25")
+                        td
+                          img(src="/images/bullet-check.svg" width="25")
+                        td
+                          img(src="/images/bullet-check.svg" width="25")
+                        td
+                          img(src="/images/bullet-check.svg" width="25")
+                      tr
+                          th Feature Name
+                          td
+                            img(src="/images/bullet-check.svg" width="25")
+                          td
+                            img(src="/images/bullet-check.svg" width="25")
+                          td
+                            img(src="/images/bullet-check.svg" width="25")
+                          td
+                            img(src="/images/bullet-check.svg" width="25")
+                      tr
+                          th Feature Name
+                          td
+                            img(src="/images/bullet-check.svg" width="25")
+                          td
+                            img(src="/images/bullet-check.svg" width="25")
+                          td
+                            img(src="/images/bullet-check.svg" width="25")
+                          td
+                            img(src="/images/bullet-check.svg" width="25")
+                      tr
+                          th Feature Name
+                          td
+                            img(src="/images/bullet-check.svg" width="25")
+                          td
+                            img(src="/images/bullet-check.svg" width="25")
+                          td
+                            img(src="/images/bullet-check.svg" width="25")
+                          td
+                            img(src="/images/bullet-check.svg" width="25")
+
+mixin featureGridHome
+  .featured-tiles
+    section.co_wrapper_tile
+      .anchor-el.co_tile_1.bg-image-cover.featured-content(style='background-image:url()', data-href='http://www.softlayer.com/info/five-hundred')
+        //p.ibm-small.tile-cat.ibm-light PRODUCT
+        .tile-content.tile-content-bottom
+          a.ibm-textcolor-black-core.ibm-h3.ibm-external-link.ibm-inlinelink.ibm-icon-after.ibm-light Offer
+          p.ibm-textcolor-black-core Ligula convallis mattis ornare velit ultricies adipisicing diam et ultricies lacus orci ipsum sed venenatis. Lacinia auctor vitae morbi magnis ullamcorper parturient pellentesque quis. Placerat sed aenean. Suspendisse sed feugiat.
+    section.co_wrapper_tile.ibm-widget-processed(data-widget='setsameheight', data-items='p.tile-copy')
+      .tile-sm.anchor-el.co_tile_4.ibm-background-blue-20(data-href='http://www.ibm.com/cloud-computing/bluemix/')
+        p.ibm-textcolor-black-core.ibm-hidden-small.tile-cat.tile-content.ibm-small.ibm-light
+          span.ibm-hidden-small Video
+        .tile-content.tile-content-bottom
+          a.ibm-textcolor-black-core.ibm-h3.ibm-external-link.ibm-inlinelink.ibm-icon-after.ibm-light IBM Joins Linux Foundation to Advance Blockchain
+          //p.ibm-textcolor-black-core.tile-copy(style='height: 52px;') Move faster on both sides of the firewall.
+      .tile-sm.anchor-el.co_tile_5.ibm-background-blue-40(data-href='http://www.ibm.com/cloud-computing/solutions/video/')
+        p.ibm-textcolor-black-core.ibm-hidden-small.tile-cat.tile-content.ibm-small.ibm-light
+          span.ibm-hidden-small Video
+        .tile-content.tile-content-bottom
+          a.ibm-textcolor-black-core.ibm-h3.ibm-external-link.ibm-inlinelink.ibm-icon-after.ibm-light Car lease DEMO
+          //p.ibm-textcolor-black-core.tile-copy(style='height: 52px;') The crowd wants the video. You want the crowd.
+      .tile-sm.anchor-el.co_tile_6.ibm-background-blue-50(data-href='https://www.ibm.com/cloud-computing/infrastructure/object-storage/index.html')
+        p.ibm-textcolor-black-core.ibm-hidden-small.tile-cat.tile-content.ibm-small.ibm-light
+          span.ibm-hidden-small Article
+        .tile-content.tile-content-bottom
+          a.ibm-textcolor-black-core.ibm-h3.ibm-external-link.ibm-inlinelink.ibm-icon-after.ibm-light Saving the future of the IoT
+          //p.ibm-textcolor-black-core.tile-copy(style='height: 52px;') Unmatched choice and flexibility with hybrid cloud object storage.
+      .tile-sm.anchor-el.co_tile_7.ibm-background-blue-30(data-href='https://www.ibm.com/cloud-computing/built-on-cloud')
+        p.ibm-textcolor-black-core.ibm-hidden-small.tile-cat.tile-content.ibm-small.ibm-light
+          span.ibm-hidden-small Article
+        .tile-content.tile-content-bottom
+          a.ibm-textcolor-black-core.ibm-h3.ibm-external-link.ibm-inlinelink.ibm-icon-after.ibm-light Making Blockchain Real for Business
+          //p.ibm-textcolor-black-core.tile-copy(style='height: 52px;') Expertise-rich SaaS apps running on a scalable cloud infrastructure.
+
+mixin featureGridForBusiness
+  .featured-tiles
+    section.co_wrapper_tile
+      .anchor-el.co_tile_1.bg-image-cover.featured-content(style='background-image:url()', data-href='http://www.softlayer.com/info/five-hundred')
+        //p.ibm-small.tile-cat.ibm-light PRODUCT
+        .tile-content.tile-content-bottom
+          a.ibm-textcolor-black-core.ibm-h3.ibm-external-link.ibm-inlinelink.ibm-icon-after.ibm-light How Businesses and Governments Can Capitalize on Blockchain
+          p.ibm-textcolor-black-core Ligula convallis mattis ornare velit ultricies adipisicing diam et ultricies lacus orci ipsum sed venenatis. Lacinia auctor vitae morbi magnis ullamcorper parturient pellentesque quis. Placerat sed aenean. Suspendisse sed feugiat.
+    section.co_wrapper_tile.ibm-widget-processed(data-widget='setsameheight', data-items='p.tile-copy')
+      .tile-sm.anchor-el.co_tile_4.ibm-background-blue-20(data-href='http://www.ibm.com/cloud-computing/bluemix/')
+        //p.ibm-textcolor-black-core.ibm-hidden-small.tile-cat.tile-content.ibm-small.ibm-light
+          span.ibm-hidden-small PRODUCT
+        .tile-content.tile-content-bottom
+          a.ibm-textcolor-black-core.ibm-h3.ibm-external-link.ibm-inlinelink.ibm-icon-after.ibm-light Saving the future of the IoT
+          //p.ibm-textcolor-black-core.tile-copy(style='height: 52px;') Move faster on both sides of the firewall.
+      .tile-sm.anchor-el.co_tile_5.ibm-background-blue-40(data-href='http://www.ibm.com/cloud-computing/solutions/video/')
+        //p.ibm-textcolor-black-core.ibm-hidden-small.tile-cat.tile-content.ibm-small.ibm-light
+          span.ibm-hidden-small SERVICE
+        .tile-content.tile-content-bottom
+          a.ibm-textcolor-black-core.ibm-h3.ibm-external-link.ibm-inlinelink.ibm-icon-after.ibm-light Bitcoin Reveals the Future of Healthcare
+          //p.ibm-textcolor-black-core.tile-copy(style='height: 52px;') The crowd wants the video. You want the crowd.
+      .tile-sm.anchor-el.co_tile_6.ibm-background-blue-50(data-href='https://www.ibm.com/cloud-computing/infrastructure/object-storage/index.html')
+        //p.ibm-textcolor-black-core.ibm-hidden-small.tile-cat.tile-content.ibm-small.ibm-light
+          span.ibm-hidden-small STORAGE
+        .tile-content.tile-content-bottom
+          a.ibm-textcolor-black-core.ibm-h3.ibm-external-link.ibm-inlinelink.ibm-icon-after.ibm-light Jump-Start the Revolution to Quicker Cross-Border Transactions
+          //p.ibm-textcolor-black-core.tile-copy(style='height: 52px;') Unmatched choice and flexibility with hybrid cloud object storage.
+      .tile-sm.anchor-el.co_tile_7.ibm-background-blue-30(data-href='https://www.ibm.com/cloud-computing/built-on-cloud')
+        //p.ibm-textcolor-black-core.ibm-hidden-small.tile-cat.tile-content.ibm-small.ibm-light
+          span.ibm-hidden-small PRODUCT
+        .tile-content.tile-content-bottom
+          a.ibm-textcolor-black-core.ibm-h3.ibm-external-link.ibm-inlinelink.ibm-icon-after.ibm-light IBM Blockchain Solution for Global Financing
+          //p.ibm-textcolor-black-core.tile-copy(style='height: 52px;') Expertise-rich SaaS apps running on a scalable cloud infrastructure.

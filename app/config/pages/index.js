@@ -28,9 +28,14 @@ module.exports = {
     stylesheet:[],
     javascript:[
     ],
-    breadcrumbs:[],
+    breadcrumbsClass:"ibm-textcolor-white-core",
+    breadcrumbs:[{
+                  label:'Overview',
+                  url:'javascript: void(0);'
+                },
+            ],
     leadspace:{
-        leadspaceimg:"http://www.ibm.com/blockchain/assets/images/landing/ibm_blockchain_hero.jpg",
+        leadspaceimg:"",
         features: {
             enabled: false,
             list:[
@@ -48,12 +53,12 @@ module.exports = {
                 img:""
             },
         },
-        header: "IBM Blockchain is open for business",
-        subhead: "Learn how blockchain will fundamentally change the way we do business. Then let us help you give it a try.",
+        header: "IBM Blockchain POV",
+        subhead: "The backbone of your enterprise cloud",
         primary_cta:{
             enabled: true,
             cta:{
-                href:"http://www.ibm.com/blockchain/for_developers.html",
+                href:"#",
                 text: "Get started",
                 onClick:"goPage(this); return false;"
             }
@@ -88,5 +93,176 @@ module.exports = {
       //
       //   }
       //}
+      {
+          temp:"ibmCarousel",
+          content:{
+            class:"ibm-band ibm-padding-top-2 ibm-padding-bottom-2",
+            background:"background: #00b0d9;",
+            headline:"",
+            carouselClass:"ibm-columns ibm-carousel__controls--light ibm-carousel__arrows--large",
+            dataHorizontal:true,
+            dataDots:true,
+            dataArrows:true,
+            dataAutoplay:false,
+            slides:{
+              class:"",
+              slide:[
+                {
+                  cards:{
+                    class:"ibm-col-6-5 ibm-center-block ibm-textcolor-white-core ibm-alternate-background",
+                    style:"border:none;background-color:transparent;",
+                    card:[
+                      {
+                        eyebrowInCardContent:{
+                          text:"Featured Content",
+                          class:"ibm-h5 ibm-textcolor-black-core"
+                        },
+                        subhead:"Headline",
+                        text:"Lorem ipsum dolor sit amet, scelerisque dapibus, sit laudantium dui elit, vestibulum sed a. Conubia at massa condimentum wisi, accumsan purus lacus ut nec, enim tellus id, orci mauris dictumst luctus at.",
+                        cta:{
+                          parentClass:"ibm-btn-link ibm-padding-top-2",
+                          class:" ibm-btn-pri ibm-btn-white",
+                          text:"See how",
+                          url:"#",
+                          target:"_blank",
+                          onClick:""
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  cards:{
+                    class:"ibm-col-6-5 ibm-center-block ibm-textcolor-white-core ibm-alternate-background",
+                    style:"border:none;background-color:transparent;",
+                    card:[
+                      {
+                        eyebrowInCardContent:{
+                          text:"Featured Content",
+                          class:"ibm-h5 ibm-textcolor-black-core"
+                        },
+                        subhead:"Headline",
+                        text:"Lorem ipsum dolor sit amet, scelerisque dapibus, sit laudantium dui elit, vestibulum sed a. Conubia at massa condimentum wisi, accumsan purus lacus ut nec, enim tellus id, orci mauris dictumst luctus at.",
+                        cta:{
+                          parentClass:"ibm-btn-link ibm-padding-top-2",
+                          class:" ibm-btn-pri ibm-btn-white",
+                          text:"See how",
+                          url:"#",
+                          target:"_blank",
+                          onClick:""
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  cards:{
+                    class:"ibm-col-6-5 ibm-center-block bm-textcolor-white-core ibm-alternate-background",
+                    style:"border:none;background-color:transparent;",
+                    card:[
+                      {
+                        eyebrowInCardContent:{
+                          text:"Featured Content",
+                          class:"ibm-h5 ibm-textcolor-black-core"
+                        },
+                        subhead:"Headline",
+                        text:"Lorem ipsum dolor sit amet, scelerisque dapibus, sit laudantium dui elit, vestibulum sed a. Conubia at massa condimentum wisi, accumsan purus lacus ut nec, enim tellus id, orci mauris dictumst luctus at.",
+                        cta:{
+                          parentClass:"ibm-btn-link  ibm-padding-top-2",
+                          class:" ibm-btn-pri ibm-btn-white",
+                          text:"See how",
+                          url:"#",
+                          target:"_blank",
+                          onClick:""
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+
+            }
+
+          }
+
+        },
+        {
+          temp:"products",
+          content:{
+            class:"ibm-band ibm-padding-top-2",
+            background:"background:#fff;",
+            headline:"IBM Blockchain in the News",
+            cards:{
+              class:"ibm-col-6-2",
+              card:[
+                {
+                  image:{
+                    src:"/images/fpo.svg",
+                    alt:"image alt text"
+                  },
+                  subhead:"Lorem ipsum dolor sit amet",
+                  text:"Lorem ipsum dolor sit amet, phasellus lorem risus, a amet taciti, erat libero, ut fusce, suspendisse id cras semper auctor arcu. Magna risus mi ipsum urna vestibulum, pulvinar elit et dignissim habitant tellus.",
+                  cta:{
+                    parentClass:"ibm-ind-link ibm-padding-top-2",
+                    class:" ibm-forward-link",
+                    text:"Internal Link",
+                    url:"#",
+                    target:"_blank",
+                    onClick:""
+                  }
+                },
+                {
+                  image:{
+                    src:"/images/fpo.svg",
+                    alt:"image alt text"
+                  },
+                  subhead:"Lorem ipsum dolor sit amet",
+                  text:"Lorem ipsum dolor sit amet, phasellus lorem risus, a amet taciti, erat libero, ut fusce, suspendisse id cras semper auctor arcu. Magna risus mi ipsum urna vestibulum, pulvinar elit et dignissim habitant tellus.",
+                  cta:{
+                    parentClass:"ibm-ind-link ibm-padding-top-2",
+                    class:" ibm-forward-link",
+                    text:"Internal Link",
+                    url:"#",
+                    target:"_blank",
+                    onClick:""
+                  }
+                },
+                {
+                  image:{
+                    src:"/images/fpo.svg",
+                    alt:"image alt text"
+                  },
+                  subhead:"Lorem ipsum dolor sit amet",
+                  text:"Lorem ipsum dolor sit amet, phasellus lorem risus, a amet taciti, erat libero, ut fusce, suspendisse id cras semper auctor arcu. Magna risus mi ipsum urna vestibulum, pulvinar elit et dignissim habitant tellus.",
+                  cta:{
+                    parentClass:"ibm-ind-link ibm-padding-top-2",
+                    class:" ibm-forward-link",
+                    text:"Internal Link",
+                    url:"#",
+                    target:"_blank",
+                    onClick:""
+                  }
+                },
+              ]
+
+            }
+          }
+        },
+        {
+          temp:"products",
+          content:{
+            class:"ibm-band ibm-padding-top-2",
+            headline:"Ready to get started?",
+            text:"Lorem ipsum dolor sit amet, vestibulum dictumst, quam nam tortor elementum mauris conubia tortor, massa integer dui, libero pellentesque quis malesuada voluptatum.",
+            cta:{
+              parentClass:"ibm-alternate-background ibm-btn-link ibm-padding-top-2",
+              class:" ibm-btn-pri ibm-btn-white",
+              text:"Get Started with IBM",
+              url:"#",
+              target:"_blank",
+              onClick:""
+            }
+          }
+        },
     ]
 } // index.html home page

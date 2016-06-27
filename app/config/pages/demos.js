@@ -39,6 +39,9 @@ module.exports = {
           leadspaceimg:"/cloud-computing/bluemix/images/fpo.svg",
           header: "Building pages in node",
           subhead: "No matter what kind of event you’re hosting, understanding what your audience is talking about is critical to your success.",
+          social:{
+            enabled: true
+          },
           features: {
               enabled: false,
               list:[

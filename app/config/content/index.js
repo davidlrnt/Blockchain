@@ -5,17 +5,21 @@ module.exports = {
     global_navigation: {
         site_def: {
             name: "IBM Blockchain",
-            path: "/blockchain",
+            path: "/blockchain/index.html",
         },
         primary_tabs: primarytabs,
     },
     content: require('../pages/index.js'),
     routes: {
 
-      "blockchain/index":require('../pages/blockchain-index.js'),
       "blockchain/testpage":require('../pages/testpage.js'),
       "blockchain/testpage/index":require('../pages/testpage.js'),
       "demos":require('../pages/demos.js'),
+
+      "blockchain/index":               require('../pages/blockchain-index.js'),
+      "blockchain/for-business":        require('../pages/for-business.js'),
+      "blockchain/basics":              require('../pages/basics.js'),
+      "blockchain/what-is-blockchain":  require('../pages/what-is-blockchain.js'),
 
     } // END routes
 }

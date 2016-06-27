@@ -1,12 +1,16 @@
 module.exports = [
-  {label: "Explore", href: "/our-approach.html",
-      secondary_tabs: [
-        {label: "Page One", href: "/blockchain/testpage.html"},
-        {label: "Page Two", href: "/blockchain/testpage.html"},
-        {label: "Page Three", href: "/blockchain/testpage.html"},
-        {label: "Page Four", href: "/blockchain/testpage.html"}
-      ]
+  {label: "Blockchain Basics", href: "/blockchain/basics",
+      // secondary_tabs: [
+      //   {label: "Page One", href: "/blockchain/testpage.html"},
+      //   {label: "Page Two", href: "/blockchain/testpage.html"},
+      //   {label: "Page Three", href: "/blockchain/testpage.html"},
+      //   {label: "Page Four", href: "/blockchain/testpage.html"}
+      // ]
   },
+  {label: "Blockchain for Business", href: "/blockchain/for-business",
+    },
+  {label: "Get started with IBM", href: "#",
+    },
   // {
   //     label: "Our Reports",
   //     href: "/our-reports",

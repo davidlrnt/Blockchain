@@ -76,7 +76,7 @@ var Config = {
     },
     template: 'v18',
     // siteTitle: 'HAL Naeco',
-    siteTitle: 'IBM Corporate Social Responsibility',
+    siteTitle: 'IBM Blockchain',
     // pages: ["Infrastructure", "Platform", "Services", ""]
     // hp_content: requireDir('./content/homepage_section'),
     // infrastructure_content: requireDir('./content/infrastructure_section'),
@@ -97,10 +97,6 @@ var Config = {
     ],
     routes: {
         "/": require('./content/index')
-        // "/our-initiatives": require('./content/index'),
-        // "/electronics": require('./content/electronics'),
-        // "/communications": require('./content/communications'),
-        // "/healthcare": require('./content/healthcare')
     },
     defaultSchema: {
         "properties": {

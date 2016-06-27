@@ -1,5 +1,4 @@
 cache/
-content_import/
 node_modules/
 public/bower_components
 public/cache

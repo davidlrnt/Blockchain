@@ -1,10 +1,9 @@
-# Default IBM V18 NodeJS Project - Bare Bones Starting Point
+# IBM Blockchain Redesign
 
 ## Project Overview
 
 This repository is intended to support Havas internal development, with delivery of compiled HTML, etc. to be provided to Team WCM
-and is meant to be an initial effort to create a starting point for a new project - devoid of prior project custom artifacts.
-Cheers!
+
 
 ## Architecture
 
