@@ -39,7 +39,7 @@ module.exports = {
                   },
               ],
       leadspace:{
-          leadspaceimg:"",
+          leadspaceimg:"/images/blockchain/IBM_Blockchain_BlockchainBasics_Hero.jpg",
           social:{
             enabled: false
           },
@@ -60,8 +60,8 @@ module.exports = {
                   img:""
               },
           },
-          header: "IBM Blockchain Basics (POV)",
-          subhead: "50 words Lorem ipsum dolor sit amet vulputate elit eget taciti. Ut mi in inceptos magnis auctor. Sollicitudin eget consectetuer. Neque commodo in. Lorem nunc minim. In eget eget. Malesuada nisl magna. Dictum eu fermentum proin quam nunc. Leo at sit pulvinar vulputate at ut ullamcorper tempus senectus ac amet nisl.",
+          header: "Blockchain Basics:<br>The building blocks for tomorrow’s enterprise",
+          subhead: "Blockchain enables businesses to transact around the globe faster than ever before.",
           primary_cta:{
               enabled: false,
               cta:{
@@ -97,14 +97,14 @@ module.exports = {
                 subhead:
                   {
                     class:"ibm-h2",
-                    text:"What is Blockchain and Why Does my Business Need It?",
+                    text:"Blockchain overview:<br>What is blockchain?",
                   },
-                  text:"50 words Lorem ipsum dolor sit amet vulputate elit eget taciti. Ut mi in inceptos magnis auctor. Sollicitudin eget consectetuer. Neque commodo in. Lorem nunc minim. In eget eget. Malesuada nisl magna. Dictum eu fermentum proin quam nunc. Leo at sit pulvinar vulputate at ut ullamcorper tempus senectus ac amet nisl.",
+                  text:"Imagine a trustworthy interaction with total accountability and transparency.",
                   cta:
                     {
                       parentClass:"ibm-ind-link",
                       class:" ibm-forward-link",
-                      text:"Learn more",
+                      text:"Blockchain explained",
                       url:"/blockchain/what-is-blockchain",
                       target:"_blank",
                       onClick:""
@@ -113,7 +113,7 @@ module.exports = {
               {
                 class:"ibm-col-6-3 ",
                 image:{
-                  src:"/images/blockchain/fpo.svg",
+                  src:"/images/blockchain/IBM_Blockchain_BlockchainBasics_Tile1.jpg",
                   alt:"image alt text"
                 },
               },
@@ -133,9 +133,9 @@ module.exports = {
                     subhead:
                       {
                         class:"ibm-h2",
-                        text:"How it works (Hyperledger)",
+                        text:"Blockchain and Hyperledger: How it works",
                       },
-                      text:"50 words Lorem ipsum dolor sit amet vulputate elit eget taciti. Ut mi in inceptos magnis auctor. Sollicitudin eget consectetuer. Neque commodo in. Lorem nunc minim. In eget eget. Malesuada nisl magna. Dictum eu fermentum proin quam nunc. Leo at sit pulvinar vulputate at ut ullamcorper tempus senectus ac amet nisl.",
+                      text:"Take a tour of the underlying technology that is the bedrock of the IBM Blockchain/Hyperledger collaboration.",
                       cta:
                         {
                           parentClass:"ibm-ind-link",
@@ -149,7 +149,7 @@ module.exports = {
               {
                 class:"ibm-col-6-3 ",
                 image:{
-                  src:"/images/blockchain/fpo.svg",
+                  src:"/images/blockchain/IBM_Blockchain_BlockchainBasics_Tile2.jpg",
                   alt:"image alt text"
                 },
               },
@@ -172,7 +172,7 @@ module.exports = {
                     url:"https://www.youtube.com/watch?v=4RRD4Jy6aWw",
                     id:"4RRD4Jy6aWw",
                     type:"youtube",
-                    img:"/images/blockchain/fpo.svg",
+                    img:"/images/blockchain/IBM_Blockchain_BlockchainBasics_VideoThumb.jpg",
                     timeStamp:"1.36"
                   },
                 },
@@ -181,9 +181,9 @@ module.exports = {
                   subhead:
                     {
                       class:"ibm-h2",
-                      text:"IBM Joins Linux Foundation to Advance Blockchain",
+                      text:"Hyperledger – See how IBM joined the Linux Foundation to advance Blockchain",
                     },
-                    text:"50 words Lorem ipsum dolor sit amet vulputate elit eget taciti. Ut mi in inceptos magnis auctor. Sollicitudin eget consectetuer. Neque commodo in. Lorem nunc minim. In eget eget. Malesuada nisl magna. Dictum eu fermentum proin quam nunc. Leo at sit pulvinar vulputate at ut ullamcorper tempus senectus ac amet nisl.",
+                    text:"The Hyperledger Project is a collaborative effort to advance Blockchain technology by identifying and addressing important features for a cross-industry, open standard for distributed ledgers.",
                 },
           ]
 
@@ -213,13 +213,12 @@ module.exports = {
           {
             temp:"products",
             content:{
-              class:"ibm-band ibm-padding-top-2",
-              headline:"Ready to get started?",
-              text:"Lorem ipsum dolor sit amet, vestibulum dictumst, quam nam tortor elementum mauris conubia tortor, massa integer dui, libero pellentesque quis malesuada voluptatum.",
+              class:"ibm-band ibm-padding-top-2 ibm-background-green-core",
+              headline:"Get started with IBM Blockchain",
               cta:{
                 parentClass:"ibm-alternate-background ibm-btn-link ibm-padding-top-2",
                 class:" ibm-btn-pri ibm-btn-white",
-                text:"Get Started with IBM",
+                text:"See how IBM can help",
                 url:"#",
                 target:"_blank",
                 onClick:""

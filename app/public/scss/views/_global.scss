@@ -78,7 +78,33 @@ body.ibm-blockchain{
   padding-top: 15px!important;
 }
 
+@media only screen and (max-width: 579px)
+{
+  .ibm-card__bottom {
+    position: relative!important;
+    padding: 0px 20px 20px 20px;
+    p{
+      padding-top:0!important;
+    }
+  }
+}
 
+
+.ibm-video-timestamp{
+    position: absolute;
+   bottom: 0px;
+   left: 0;
+   width: 100%;
+   background-color: rgba(0,0,0,0.7);
+   text-align: right;
+   font-size: 13px;
+   color: #FFF;
+   padding: 3px 5px;
+   box-sizing: border-box;
+}
+.ibm-video-placeholder .ibm-video-timestamp{
+   bottom: 3px;
+}
 
 
 .bluemix-table thead tr {
@@ -89,10 +115,18 @@ body.ibm-blockchain{
    background: #F3F6FC ;
 }
 .bluemix-table thead th, .bluemix-table tbody td, .bluemix-table tbody th {
-    padding: 15px;
+    padding: 15px 0;
 }
-
-
+.bluemix-table tbody th {
+  font-family: "HelveticaNeue-Bold", "HelvBoldIBM", Arial, sans-serif;
+     font-weight: normal;
+}
+.bluemix-table td{
+  vertical-align: middle;
+}
+.bluemix-table th:first-letter,td:first-letter{
+  text-transform: capitalize
+}
 
 
 //feature grid section
@@ -283,4 +317,10 @@ div[class*=co_tile_1],div[class*=co-tile-1] {
     .featured-tiles .tile-sm {
         width: 100%
     }
+}
+.bg-image-cover {
+   background-size: cover;
+   background-position: center center;
+   background-repeat: no-repeat;
+   position: relative;
 }

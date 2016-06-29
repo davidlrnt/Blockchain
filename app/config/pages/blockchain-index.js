@@ -28,8 +28,8 @@ module.exports = {
         pageID:'http://www.ibm.com/blockchain',
         siteID:'BLOCKCHAIN'
       },
-      stylesheet:[],
-      javascript:["/javascripts/main-v2.js"
+      stylesheet:["/stylesheets/animate.css"],
+      javascript:["/javascripts/main-v2.js","/javascripts/wow.min.js"
       ],
       breadcrumbsEnabled: false,
       breadcrumbsClass:"ibm-textcolor-white-core",
@@ -39,7 +39,7 @@ module.exports = {
                   },
               ],
       leadspace:{
-          leadspaceimg:"",
+          leadspaceimg:"/images/blockchain/IBM_Blockchain_Homepage_Hero.jpg",
           social:{
             enabled: true
           },
@@ -60,8 +60,8 @@ module.exports = {
                   img:""
               },
           },
-          header: "IBM Blockchain POV",
-          subhead: "25 words Lorem ipsum dolor. Sit amet pede. Ipsum nam mauris. Morbi in sit augue risus sem nam est scelerisque. Explicabo vel luctus sodales quis ipsum et.",
+          header: "IBM Blockchain is open for business",
+          subhead: "What if you can transport assets and capital around the globe in the blink of an eye?<br>Like the explosion of the Internet in 1991, blockchain has the potential to re-shape the world we live in.",
           primary_cta:{
               enabled: false,
               cta:{
@@ -89,7 +89,7 @@ module.exports = {
           temp:"products",
           content:{
             class:"ibm-band ibm-padding-top-2",
-            headline:"Featured Content",
+            headline:"IBM Blockchain in application",
           }
         },
         {
@@ -204,8 +204,8 @@ module.exports = {
                       src:"/images/blockchain/fpo.svg",
                       alt:"image alt text"
                     },
-                    subhead:"IBM Launches First Highly Secure Blockchain",
-                    text:"Lorem ipsum dolor sit amet, phasellus lorem risus, a amet taciti, erat libero, ut fusce, suspendisse id cras semper auctor arcu. Magna risus mi ipsum urna vestibulum, pulvinar elit et dignissim habitant tellus.",
+                    subhead:"IBM launches first highly secure Blockchain Services across multiple industries",
+                    text:"See how IBM launched Blockchain services for clients across a range of industries including Financial Services, Government, and Healthcare on IBM Cloud and empowered developers to run Blockchain using Docker containers.",
                     cta:{
                       parentClass:"ibm-ind-link ibm-padding-top-2",
                       class:" ibm-forward-link",
@@ -220,8 +220,8 @@ module.exports = {
                       src:"/images/blockchain/fpo.svg",
                       alt:"image alt text"
                     },
-                    subhead:"IBM and Japan’s Largest Stock Exchange to Test Blockchain",
-                    text:"Lorem ipsum dolor sit amet, phasellus lorem risus, a amet taciti, erat libero, ut fusce, suspendisse id cras semper auctor arcu. Magna risus mi ipsum urna vestibulum, pulvinar elit et dignissim habitant tellus.",
+                    subhead:"IBM tests Blockchain for trading with the Japan Exchange Group",
+                    text:"IBM teamed up with Japan Exchange Group to announce that they are testing the potential of Blockchain technology for use in trading in low transaction markets.",
                     cta:{
                       parentClass:"ibm-ind-link ibm-padding-top-2",
                       class:" ibm-forward-link",
@@ -236,8 +236,8 @@ module.exports = {
                       src:"/images/blockchain/fpo.svg",
                       alt:"image alt text"
                     },
-                    subhead:"IBM Delivers Blockchain-As-A- Service for Developers",
-                    text:"Lorem ipsum dolor sit amet, phasellus lorem risus, a amet taciti, erat libero, ut fusce, suspendisse id cras semper auctor arcu. Magna risus mi ipsum urna vestibulum, pulvinar elit et dignissim habitant tellus.",
+                    subhead:"IBM makes Blockchain-as-a-Service available to developers",
+                    text:"To help developers quickly explore the use of Blockchain for the enterprise, IBM has made nearly 44,000 lines of code available to the Linux Foundation’s open source Hyperledger Project.",
                     cta:{
                       parentClass:"ibm-ind-link ibm-padding-top-2",
                       class:" ibm-forward-link",
@@ -255,13 +255,12 @@ module.exports = {
           {
             temp:"products",
             content:{
-              class:"ibm-band ibm-padding-top-2",
-              headline:"Find out how IBM can help you get started with Blockchain",
-              text:"Lorem ipsum dolor sit amet, vestibulum dictumst, quam nam tortor elementum mauris conubia tortor, massa integer dui, libero pellentesque quis malesuada voluptatum.",
+              class:"ibm-band ibm-padding-top-2 ibm-background-green-core",
+              headline:"Get started with IBM Blockchain",
               cta:{
                 parentClass:"ibm-alternate-background ibm-btn-link ibm-padding-top-2",
                 class:" ibm-btn-pri ibm-btn-white",
-                text:"Get Started with IBM",
+                text:"See how IBM can help",
                 url:"#",
                 target:"_blank",
                 onClick:""

@@ -29,7 +29,7 @@ module.exports = {
         siteID:'BLUEMIX'
       },
       stylesheet:[],
-      javascript:[],
+      javascript:["/javascripts/main-v2.js"],
       breadcrumbs:[
         {
           label:'Products',
@@ -41,7 +41,8 @@ module.exports = {
         }
       ],
       leadspace:{
-          leadspaceimg:"",
+          leadspaceimg:"/images/blockchain/leadspace-parallax.jpg",
+          parallax: true,
           social:{
             enabled: true
           },
@@ -89,6 +90,9 @@ module.exports = {
       // end leadspace
 
       modules:[
+        {
+                  temp: "featureGridTest"
+        },
         {
           temp: "bluemixTable"
         },
@@ -270,8 +274,29 @@ module.exports = {
                 class:"ibm-col-6-2",
                 card:[
                   {
+                    video:{
+                      title:"IBM Joins Linux Foundation to Advance Blockchain Hyperledger",
+                      display:"inline",
+                      url:"https://www.youtube.com/watch?v=4RRD4Jy6aWw",
+                      id:"4RRD4Jy6aWw",
+                      type:"youtube",
+                      img:"/images/blockchain/ibm-module.jpg",
+                      timeStamp:"1.36"
+                    },
+                    subhead:"Lorem ipsum dolor sit amet",
+                    text:"Lorem ipsum dolor sit amet, phasellus lorem risus, a amet taciti, erat libero, ut fusce, suspendisse id cras semper auctor arcu. Magna risus mi ipsum urna vestibulum, pulvinar elit et dignissim habitant tellus.",
+                    cta:{
+                      parentClass:"ibm-ind-link ibm-padding-top-2",
+                      class:" ibm-forward-link",
+                      text:"Internal Link",
+                      url:"#",
+                      target:"_blank",
+                      onClick:""
+                    }
+                  },
+                  {
                     image:{
-                      src:"/images/fpo.svg",
+                      src:"/images/blockchain/ibm-module.jpg",
                       alt:"image alt text"
                     },
                     subhead:"Lorem ipsum dolor sit amet",
@@ -287,23 +312,7 @@ module.exports = {
                   },
                   {
                     image:{
-                      src:"/images/fpo.svg",
-                      alt:"image alt text"
-                    },
-                    subhead:"Lorem ipsum dolor sit amet",
-                    text:"Lorem ipsum dolor sit amet, phasellus lorem risus, a amet taciti, erat libero, ut fusce, suspendisse id cras semper auctor arcu. Magna risus mi ipsum urna vestibulum, pulvinar elit et dignissim habitant tellus.",
-                    cta:{
-                      parentClass:"ibm-ind-link ibm-padding-top-2",
-                      class:" ibm-forward-link",
-                      text:"Internal Link",
-                      url:"#",
-                      target:"_blank",
-                      onClick:""
-                    }
-                  },
-                  {
-                    image:{
-                      src:"/images/fpo.svg",
+                      src:"/images/blockchain/ibm-module.jpg",
                       alt:"image alt text"
                     },
                     subhead:"Lorem ipsum dolor sit amet",
@@ -322,6 +331,172 @@ module.exports = {
               }
             }
           },
+          {
+            temp:"products",
+            content:{
+              class:"ibm-band ibm-padding-top-2",
+              background:"background:#fff;",
+              headline:"Experts Blogposts",
+              cards:{
+                class:"ibm-col-6-4",
+                card:[
+                  {
+                    video:{
+                      title:"IBM Joins Linux Foundation to Advance Blockchain Hyperledger",
+                      display:"inline",
+                      url:"https://www.youtube.com/watch?v=4RRD4Jy6aWw",
+                      id:"4RRD4Jy6aWw",
+                      type:"youtube",
+                      img:"/images/blockchain/ibm-module.jpg",
+                      timeStamp:"1.36"
+                    },
+                    subhead:"Lorem ipsum dolor sit amet",
+                    text:"Lorem ipsum dolor sit amet, phasellus lorem risus, a amet taciti, erat libero, ut fusce, suspendisse id cras semper auctor arcu. Magna risus mi ipsum urna vestibulum, pulvinar elit et dignissim habitant tellus.",
+                    cta:{
+                      parentClass:"ibm-ind-link ibm-padding-top-2",
+                      class:" ibm-forward-link",
+                      text:"Internal Link",
+                      url:"#",
+                      target:"_blank",
+                      onClick:""
+                    }
+                  },
+                  {
+                    image:{
+                      src:"/images/blockchain/ibm-module.jpg",
+                      alt:"image alt text"
+                    },
+                    subhead:"Lorem ipsum dolor sit amet",
+                    text:"Lorem ipsum dolor sit amet, phasellus lorem risus, a amet taciti, erat libero, ut fusce, suspendisse id cras semper auctor arcu. Magna risus mi ipsum urna vestibulum, pulvinar elit et dignissim habitant tellus.",
+                    cta:{
+                      parentClass:"ibm-ind-link ibm-padding-top-2",
+                      class:" ibm-forward-link",
+                      text:"Internal Link",
+                      url:"#",
+                      target:"_blank",
+                      onClick:""
+                    }
+                  },
+                  {
+                    image:{
+                      src:"/images/blockchain/ibm-module.jpg",
+                      alt:"image alt text"
+                    },
+                    subhead:"Lorem ipsum dolor sit amet",
+                    text:"Lorem ipsum dolor sit amet, phasellus lorem risus, a amet taciti, erat libero, ut fusce, suspendisse id cras semper auctor arcu. Magna risus mi ipsum urna vestibulum, pulvinar elit et dignissim habitant tellus.",
+                    cta:{
+                      parentClass:"ibm-ind-link ibm-padding-top-2",
+                      class:" ibm-forward-link",
+                      text:"Internal Link",
+                      url:"#",
+                      target:"_blank",
+                      onClick:""
+                    }
+                  },
+                ]
+
+              }
+            }
+          },
+          {
+            temp:"products",
+            content:{
+              class:"ibm-band ibm-padding-top-2",
+              background:"background:#fff;",
+              headline:"Experts Blogposts",
+              cards:{
+                class:"ibm-col-6-1",
+                card:[
+                  {
+                    image:{
+                      src:"/images/blockchain/ibm-module.jpg",
+                      alt:"image alt text"
+                    },
+                    subhead:"Lorem ipsum dolor sit amet",
+                    text:"Lorem ipsum dolor sit amet, phasellus lorem risus, a amet taciti, erat libero, ut fusce, suspendisse id cras semper auctor arcu. Magna risus mi ipsum urna vestibulum, pulvinar elit et dignissim habitant tellus.",
+                    cta:{
+                      parentClass:"ibm-ind-link ibm-padding-top-2",
+                      class:" ibm-forward-link",
+                      text:"Internal Link",
+                      url:"#",
+                      target:"_blank",
+                      onClick:""
+                    }
+                  },
+                  {
+                    video:{
+                      title:"IBM Joins Linux Foundation to Advance Blockchain Hyperledger",
+                      display:"inline",
+                      url:"https://www.youtube.com/watch?v=4RRD4Jy6aWw",
+                      id:"4RRD4Jy6aWw",
+                      type:"youtube",
+                      img:"/images/blockchain/ibm-module.jpg",
+                      timeStamp:"1.36"
+                    },
+                    subhead:"Lorem ipsum dolor sit amet",
+                    text:"Lorem ipsum dolor sit amet, phasellus lorem risus, a amet taciti, erat libero, ut fusce, suspendisse id cras semper auctor arcu. Magna risus mi ipsum urna vestibulum, pulvinar elit et dignissim habitant tellus.",
+                    cta:{
+                      parentClass:"ibm-ind-link ibm-padding-top-2",
+                      class:" ibm-forward-link",
+                      text:"Internal Link",
+                      url:"#",
+                      target:"_blank",
+                      onClick:""
+                    }
+                  },
+                  {
+                    image:{
+                      src:"/images/blockchain/ibm-module.jpg",
+                      alt:"image alt text"
+                    },
+                    subhead:"Lorem ipsum dolor sit amet",
+                    text:"Lorem ipsum dolor sit amet, phasellus lorem risus, a amet taciti, erat libero, ut fusce, suspendisse id cras semper auctor arcu. Magna risus mi ipsum urna vestibulum, pulvinar elit et dignissim habitant tellus.",
+                    cta:{
+                      parentClass:"ibm-ind-link ibm-padding-top-2",
+                      class:" ibm-forward-link",
+                      text:"Internal Link",
+                      url:"#",
+                      target:"_blank",
+                      onClick:""
+                    }
+                  },
+                ]
+
+              }
+            }
+          },
+          {
+              temp:"feature2col",
+              content:{
+                class:"ibm-band ibm-padding-top-2",
+                headline:"",
+                text:"",
+                cards:[
+                  {
+                    class:"ibm-col-6-3 ",
+                    video:{
+                      title:"IBM Joins Linux Foundation to Advance Blockchain Hyperledger",
+                      display:"inline",
+                      url:"https://www.youtube.com/watch?v=4RRD4Jy6aWw",
+                      id:"4RRD4Jy6aWw",
+                      type:"youtube",
+                      img:"/images/blockchain/ibm-module.jpg",
+                      timeStamp:"1.36"
+                    },
+                  },
+                  {
+                    class:"ibm-col-6-3 ",
+                    subhead:
+                      {
+                        class:"ibm-h2",
+                        text:"IBM Joins Linux Foundation to Advance Blockchain",
+                      },
+                      text:"50 words Lorem ipsum dolor sit amet vulputate elit eget taciti. Ut mi in inceptos magnis auctor. Sollicitudin eget consectetuer. Neque commodo in. Lorem nunc minim. In eget eget. Malesuada nisl magna. Dictum eu fermentum proin quam nunc. Leo at sit pulvinar vulputate at ut ullamcorper tempus senectus ac amet nisl.",
+                  },
+            ]
+
+          }
+        },
         {
           temp:"featuredTilesVideo",
         content: {
