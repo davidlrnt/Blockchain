@@ -19476,121 +19476,125 @@
     )
 }
 
-(),
-function(e) {
-    function t(t) {
-        var o=this;
-        o.o=t,
-        o.index=0,
-        o.allData=[],
-        this.getNextCategory=function() {
-            o.index<o.o.categories.length?o.getCategory(o.o.categories[o.index].name):(o.buildHtml(), jQuery("#"+o.o.carouselID).slick( {
-                dots:!0, arrows:!1, infinite:!0, slidesToShow:3, slidesToScroll:3, responsive:[ {
-                    breakpoint:768, settings: {
-                        slidesToShow: 1, slidesToScroll: 1, infinite: !1, dots: !1
-                    }
-                }
-                ]
-            }
-            ))
-        }
-        ,
-        this.buildHtml=function() {
-            for(var t=e("#eventCarouselContainer"), a=e("<section />", {
-                "class": "co_wrapper_event_tile", id: o.o.carouselID
-            }
-            ).appendTo(e(t)), i=0;
-            i<o.allData.length;
-            i++) {
-                console.log("All Data:"),
-                console.log(o.allData);
-                for(var n=0;
-                n<o.allData[i].events.length;
-                n++) {
-                    var r,
-                    s=o.allData[i].events[n],
-                    r=e("<div />", {
-                        "class": o.o.itemClass+" tile-sm", "data-widget": "setsameheight", "data-items": "p.tile-copy"
-                    }
-                    ).appendTo(e(a)),
-                    l=e("<a />", {
-                        href: s.url, style: "position:absolute;width:100%;height:100%;", target: "_blank"
-                    }
-                    ).appendTo(e(r)),
-                    p=e("<div />", {
-                        "class": "tile-content tile-content-top"
-                    }
-                    ).appendTo(e(l)),
-                    d=e("<p />", {
-                        "class": "ibm-hidden-small tile-cat tile-content ibm-small ibm-bold"
-                    }
-                    ).appendTo(e(p)),
-                    c=new Date(s.schedule["date-start"]),
-                    y=(e("<span />", {
-                        "class":"ibm-textcolor-gray-60", html:c.toLocaleString("en-us", {
-                            month: "long"
-                        }
-                        )+" "+c.toLocaleString("en-us", {
-                            day: "numeric"
-                        }
-                        )
-                    }
-                    ).appendTo(e(d)), e("<div />", {
-                        "class": "tile-content tile-content-bottom"
-                    }
-                    ).appendTo(e(l)));
-                    e("<a />", {
-                        "class": "ibm-h2 ibm-inlinelink ibm-textcolor-gray-60", html: s.name
-                    }
-                    ).appendTo(e(y)),
-                    e("<a />", {
-                        "class": "tile-arrow ibm-h4 ibm-forward-link ibm-icon-after ibm-textcolor-blue-60", html: ""
-                    }
-                    ).appendTo(e(l)),
-                    e("<p />", {
-                        "class": "tile-copy tile-location ibm-light ibm-textcolor-gray-60", html: s.location.town+", "+(s.location.state?s.location.state: s.location.country)
-                    }
-                    ).appendTo(e(y))
-                }
-            }
-        }
-        ,
-        this.getCategory=function(t) {
-            e.getJSON(o.o.baseUrl+t+o.o.queryString, function(e) {
-                if(o.index+=1, 0==o.allData.length)o.allData.push(e);
-                else {
-                    var t=o.allData[0];
-                    t.events.push.apply(t.events, e.events)
-                }
-                o.getNextCategory()
-            }
-            )
-        }
-        ,
-        o.getNextCategory()
-    }
-    var o= {
-        carouselID:"event-carousel",
-        slideSize:4,
-        itemClass:"co_event_tile",
-        eventCTA:"Learn more",
-        baseUrl:"https://developer.ibm.com/",
-        queryString:"/?post_type=events&tag=jm&blog=1&feed=json",
-        categories:[ {
-            name: "events", "class": "", type: ""
-        }
-        ]
-    }
-    ;
-    new t(o)
-}
+// (),
+// function(e) {
+//     function t(t) {
+//         var o=this;
+//         o.o=t,
+//         o.index=0,
+//         o.allData=[],
+//         this.getNextCategory=function() {
+//             o.index<o.o.categories.length?o.getCategory(o.o.categories[o.index].name):(o.buildHtml(), jQuery("#"+o.o.carouselID).slick( {
+//                 dots:!0, arrows:!1, infinite:!0, slidesToShow:3, slidesToScroll:3, responsive:[ {
+//                     breakpoint:768, settings: {
+//                         slidesToShow: 1, slidesToScroll: 1, infinite: !1, dots: !1
+//                     }
+//                 }
+//                 ]
+//             }
+//             ))
+//         }
+//         ,
+//         this.buildHtml=function() {
+//             for(var t=e("#eventCarouselContainer"), a=e("<section />", {
+//                 "class": "co_wrapper_event_tile", id: o.o.carouselID
+//             }
+//             ).appendTo(e(t)), i=0;
+//             i<o.allData.length;
+//             i++) {
+//                 console.log("All Data:"),
+//                 console.log(o.allData);
+//                 for(var n=0;
+//                 n<o.allData[i].events.length;
+//                 n++) {
+//                     var r,
+//                     s=o.allData[i].events[n],
+//                     r=e("<div />", {
+//                         "class": o.o.itemClass+" tile-sm", "data-widget": "setsameheight", "data-items": "p.tile-copy"
+//                     }
+//                     ).appendTo(e(a)),
+//                     l=e("<a />", {
+//                         href: s.url, style: "position:absolute;width:100%;height:100%;", target: "_blank"
+//                     }
+//                     ).appendTo(e(r)),
+//                     p=e("<div />", {
+//                         "class": "tile-content tile-content-top"
+//                     }
+//                     ).appendTo(e(l)),
+//                     d=e("<p />", {
+//                         "class": "ibm-hidden-small tile-cat tile-content ibm-small ibm-bold"
+//                     }
+//                     ).appendTo(e(p)),
+//                     c=new Date(s.schedule["date-start"]),
+//                     y=(e("<span />", {
+//                         "class":"ibm-textcolor-gray-60", html:c.toLocaleString("en-us", {
+//                             month: "long"
+//                         }
+//                         )+" "+c.toLocaleString("en-us", {
+//                             day: "numeric"
+//                         }
+//                         )
+//                     }
+//                     ).appendTo(e(d)), e("<div />", {
+//                         "class": "tile-content tile-content-bottom"
+//                     }
+//                     ).appendTo(e(l)));
+//                     e("<a />", {
+//                         "class": "ibm-h2 ibm-inlinelink ibm-textcolor-gray-60", html: s.name
+//                     }
+//                     ).appendTo(e(y)),
+//                     e("<a />", {
+//                         "class": "tile-arrow ibm-h4 ibm-forward-link ibm-icon-after ibm-textcolor-blue-60", html: ""
+//                     }
+//                     ).appendTo(e(l)),
+//                     e("<p />", {
+//                         "class": "tile-copy tile-location ibm-light ibm-textcolor-gray-60", html: s.location.town+", "+(s.location.state?s.location.state: s.location.country)
+//                     }
+//                     ).appendTo(e(y))
+//                 }
+//             }
+//         }
+//         ,
+//         this.getCategory=function(t) {
+//             e.getJSON(o.o.baseUrl+t+o.o.queryString, function(e) {
+//                 if(o.index+=1, 0==o.allData.length)o.allData.push(e);
+//                 else {
+//                     var t=o.allData[0];
+//                     t.events.push.apply(t.events, e.events)
+//                 }
+//                 o.getNextCategory()
+//             }
+//             )
+//         }
+//         ,
+//         o.getNextCategory()
+//     }
+//     var o= {
+//         carouselID:"event-carousel",
+//         slideSize:4,
+//         itemClass:"co_event_tile",
+//         eventCTA:"Learn more",
+//         baseUrl:"https://developer.ibm.com/",
+//         queryString:"/?post_type=events&tag=jm&blog=1&feed=json",
+//         categories:[ {
+//             name: "events", "class": "", type: ""
+//         }
+//         ]
+//     }
+//     ;
+//     new t(o)
+// }
 
 (jQuery),
 function(e, t) {
     e(function() {
         e(".anchor-el").on("click", function() {
           console.log("feature grid click!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            window.location=e(this).attr("data-href")
+          if ("true" == e(this).attr("data-ga-outbound")){
+            trackOutboundLink(e(this).attr("data-href"));
+          }else{
+            window.location=e(this).attr("data-href");
+          }
         }
         ), e("img.svg").length&&e("img.svg").each(function() {
             var t=e(this), o=t.attr("id"), a=t.attr("class"), i=t.attr("src");

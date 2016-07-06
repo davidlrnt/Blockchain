@@ -7,10 +7,10 @@
   -var date = "0"+date
 
 ="\n"
-<!-- ALL CHANGES to any portion of the <head> tag of this, or any page in the ibm.com/cloud-computing/bluemix/ domain, requires written approval of the site owner specified in the "pageinfo.ibm.owner" field -->
+<!-- ALL CHANGES to any portion of the <head> tag of this, or any page in the ibm.com/Blockchain/ domain, requires written approval of the site owner specified in the "pageinfo.ibm.owner" field -->
 ="\n\n"
 
-<!-- START - v18 Bluemix Required Meta - No Edit -->
+<!-- START - v18 Blockchain Required Meta - No Edit -->
 meta(charset="UTF-8")
 
 if(content.pagetitle)
@@ -25,7 +25,7 @@ if(content.pagetitle)
   link(rel="icon", href="//www.ibm.com/favicon.ico")
   link(rel="shortcut icon", href="//www.ibm.com/favicon.ico")
   ="\n"
-  <!-- END - v18 Bluemix Required Meta - No Edit -->
+  <!-- END - v18 Blockchain Required Meta - No Edit -->
   ="\n\n"
 
 
@@ -57,7 +57,7 @@ if(content.pagetitle)
                   publishDate: "!{(new Date()).getFullYear()}-#{mo}-#{date}",
                   expiryDate: "!{(new Date()).getFullYear()+1}-#{mo}-#{date}",
                   language: "en",
-                  publisher: "IBM Corporation - Bluemix",
+                  publisher: "IBM Corporation - Blockchain",
                   version: "v18",
                   ibm: {
                       siteID: "#{content.digitalData.siteID}",
@@ -73,7 +73,7 @@ if(content.pagetitle)
       };
 
 = "\n\n"
-<!-- START - Bluemix Custom Naming and Analytics -->
+<!-- START - Blockchain Custom Naming and Analytics -->
 = "\n"
 <!-- Segment Naming -->
 meta(name="segment" property="#{content.segment_naming.property}", value="#{content.segment_naming.value}")
@@ -81,9 +81,10 @@ script.
   /* Control which analytics libraries are loaded */
   window._analytics =  !{JSON.stringify(content.analytics)}
 
-//script(src='//console.ng.bluemix.net/analytics/build/bluemix-analytics.js')
+script(src='/javascripts/google-analytics-blockchain.js')
+script(src='/javascripts/google-analytics-external-blockchain.js')
 = "\n"
-<!-- END - Bluemix Custom Naming and Analytics -->
+<!-- END - Blockchain Custom Naming and Analytics -->
 
 
 
@@ -102,8 +103,8 @@ link(rel='stylesheet', href='/stylesheets/style.css')
 
 ="\n\n"
 <!-- v18 Required Sitewide Javascript -->
-//script(src='/cloud-computing/bluemix/javascripts/jquery-2.1.3.min.js')
-//script(src='/cloud-computing/bluemix/javascripts/jquery.cookie.js')
+//script(src='/cloud-computing/Blockchain/javascripts/jquery-2.1.3.min.js')
+//script(src='/cloud-computing/Blockchain/javascripts/jquery.cookie.js')
 script(src="#{v18src}stats/ida_stats.js")
 script(src='#{v18src}v18/js/www.js')
 ="\n"
@@ -112,7 +113,7 @@ script(src='#{v18src}v18/js/www.js')
 
 
 
-//- Bluemix global custom stylesheets
+//- Blockchain global custom stylesheets
 
 
 //- page only stylesheets
