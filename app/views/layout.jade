@@ -50,6 +50,7 @@ html(lang="en")
           - var customLeadspace = (content.leadspace.is_custom)
           if(!content.leadspace.hidden)
             #ibm-leadspace-head.ibm-padding-top-1(style=leadstyle class=content.section_color data-widget="#{parallax}")&attributes( (customLeadspace) ? {"class":"bluemix-custom-leadspace "} : {"class":"ibm-padding-bottom-r1"})
+              .grad
               if (content.breadcrumbsEnabled)
                 nav(role="navigation", aria-label="Breadcrumbs")
                   ul#ibm-navigation-trail.ibm-padding-bottom-0(style=" "+breadcrumbsStyle)

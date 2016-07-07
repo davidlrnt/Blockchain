@@ -39,7 +39,8 @@ module.exports = {
                   },
               ],
       leadspace:{
-          leadspaceimg:"/images/blockchain/IBM_Blockchain_Homepage_Hero.jpg",
+          parallax: false,
+          leadspaceimg: "/images/blockchain/IBM_Blockchain_Homepage_Hero.jpg",
           social:{
             enabled: true
           },
@@ -60,14 +61,15 @@ module.exports = {
                   img:""
               },
           },
-          header: "IBM Blockchain is open for business",
-          subhead: "What if you can transport assets and capital around the globe in the blink of an eye?<br>Like the explosion of the Internet in 1991, blockchain has the potential to re-shape the world we live in.",
+          header: "Experience IBM Blockchain",
+          subhead: "Transaction driven transformation",
+          paragraph: "IBM Blockchain empowers businesses to move assets and capital securely around the globe in the blink of an eye. It's shared ledger -- open to known members only -- sits on a permissioned network making all transactions fast, secure and confidential.",
           primary_cta:{
-              enabled: false,
+              enabled: true,
               cta:{
-                  href:"#",
-                  text: "Watch Video",
-                  onClick:"goPage(this); return false;"
+                  href:"##_REPLACE_ME_##",
+                  text: "Explore IBM Blockchain",
+                  onClick:""
               }
           },
           secondary_cta:{

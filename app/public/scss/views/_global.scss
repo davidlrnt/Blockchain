@@ -9,6 +9,22 @@ body.ibm-blockchain{
 
 #ibm-leadspace-body, #ibm-leadspace-head {
     position: relative;
+    .grad {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+      display: none;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      @include respond-to-max(smaller) {
+        display: block;
+      }
+    }
+}
+.disable-grad-mobile{
+  .grad{opacity:0 !important;}
 }
 #ibm-leadspace-social {
     display: block;
@@ -40,6 +56,9 @@ body.ibm-blockchain{
 #ibm-leadspace-social .ibm-leadspace-social-links p.ibm-ind-link a span {
     display: none;
 }
+
+
+
 @media only screen and (max-width: 579px){
   #ibm-leadspace-social .ibm-leadspace-social-links {
     text-align: center;
@@ -177,6 +196,33 @@ div[class*=co_tile_1],div[class*=co-tile-1] {
     flex: 1 0 50%;
     height: calc(25vw * .75)
 }
+
+//Handle borders
+.co_tile_1,.co-tile-1{
+  box-sizing: border-box;
+  border-right: 2px solid #fff;
+}
+.co_tile_2,.co-tile-2{
+  box-sizing: border-box;
+  border-right: 1px solid #c7c7c7;
+  border-bottom: 1px solid #c7c7c7;
+}
+.co_tile_3,.co-tile-3{
+  box-sizing: border-box;
+  border-left: 1px solid #c7c7c7;
+  border-bottom: 1px solid #c7c7c7;
+}
+.co_tile_4,.co-tile-4{
+  box-sizing: border-box;
+  border-right: 1px solid #c7c7c7;
+  border-top: 1px solid #c7c7c7;
+}
+.co_tile_5,.co-tile-5{
+  box-sizing: border-box;
+  border-left: 1px solid #c7c7c7;
+  border-top: 1px solid #c7c7c7;
+}
+
 @media only screen and (min-width: 580px) and (max-width: 1024px) {
     .co_wrapper_cover,.co-wrapper-cover {
         height: calc(100vw - 131px);
@@ -224,7 +270,14 @@ div[class*=co_tile_1],div[class*=co-tile-1] {
     .co_tile_8,.co-tile-8,
     .co_tile_9,.co-tile-9 {
         flex: 1 0 100%;
-        min-height: calc(25vw * 1.5)
+        min-height: calc(25vw * 1.5);
+    }
+    .tile-sm{
+      border:none;
+      border-bottom: 1px solid #c7c7c7;
+    }
+    .tile-sm:last-of-type{
+      border: none;
     }
 }
 .featured-tiles {

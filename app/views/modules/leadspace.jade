@@ -76,18 +76,16 @@
   else
     //- Tier 1 homepage view
     .ibm-columns.ibm-alternate-background.ibm-padding-top-2.ibm-padding-bottom-1(style="position:relative" data-widget="parallax")
-      .ibm-col-5-3.ibm-col-large-6-3.ibm-col-medium-6-4.wow.fadeIn(class=customClass)
-          h1#ibm-pagetitle-h1.ibm-h1.ibm-light.ibm-medium= content.leadspace.header
-            if content.is_index
-              h3.ibm-h3.ibm-light !{content.leadspace.subhead}
-            else
-              p= content.leadspace.subhead
+      .ibm-col-6-3.ibm-col-large-6-3.ibm-col-medium-6-4.wow.fadeIn(class=customClass)
+          h3.ibm-h3.ibm-bold !{content.leadspace.subhead}
+          h1#ibm-pagetitle-h1.ibm-h1.ibm-bold= content.leadspace.header
+          p !{content.leadspace.paragraph}
           if (content.leadspace.primary_cta.enabled)
             p.ibm-button-link.ibm-padding-top-1.ibm-btn-row
               if (content.leadspace.primary_cta.cta.onClick)
-                a.ibm-btn-pri.ibm-btn-blue-50(class=(content.leadspace.primary_cta.cta._class) ? "#{content.leadspace.primary_cta.cta._class}" : "" href="#{content.leadspace.primary_cta.cta.href}" onclick="#{content.leadspace.primary_cta.cta.onClick}" )= content.leadspace.primary_cta.cta.text
+                a.ibm-btn-sec.ibm-btn-white(class=(content.leadspace.primary_cta.cta._class) ? "#{content.leadspace.primary_cta.cta._class}" : "" href="#{content.leadspace.primary_cta.cta.href}" onclick="#{content.leadspace.primary_cta.cta.onClick}" )= content.leadspace.primary_cta.cta.text
               else
-                a.ibm-btn-pri.ibm-btn-blue-50(class=(content.leadspace.primary_cta.cta._class) ? "#{content.leadspace.primary_cta.cta._class}" : "" href="#{content.leadspace.primary_cta.cta.href}" )= content.leadspace.primary_cta.cta.text
+                a.ibm-btn-sec.ibm-btn-white(class=(content.leadspace.primary_cta.cta._class) ? "#{content.leadspace.primary_cta.cta._class}" : "" href="#{content.leadspace.primary_cta.cta.href}" )= content.leadspace.primary_cta.cta.text
 if social
   #ibm-leadspace-social
     .ibm-columns
