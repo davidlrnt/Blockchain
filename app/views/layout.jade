@@ -39,6 +39,7 @@ html(lang="en")
             .ibm-sitenav-menu-list
               ul(role="menubar")
                 for tab in nav.primary_tabs
+                  //-p #{path} #{tab.href}
                   +tabV18(tab, (path.indexOf(tab.href) > -1))
           - var parallax = (content.leadspace.parallax) ? "parallaxscroll" : ""
           if(content.leadspace.leadspaceimg != undefined)

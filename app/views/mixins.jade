@@ -637,9 +637,11 @@ mixin feature2col(obj)
           if(obj.content.text)
             +text(obj.content.text)
 
-    div(class="ibm-columns")
+    div(class="ibm-columns")&attributes(obj.content.setsameheight ? {"data-widget":"setsameheight", "data-items":obj.content.setsameheight.class} : '')
       for c in obj.content.cards
-        div(class=c.class)
+        div(style="#{c.background}" class=c.class)
+          if(c.imagetop)
+            +image(c.imagetop)
           if(c.eyebrow)
             +eyebrow(c.eyebrow)
           if(c.headline)
@@ -662,6 +664,10 @@ mixin feature2col(obj)
             +tabgroup(c.tabgroup)
 
 mixin tabV18(data, active)
+     - var className = ""
+     if (active) 
+       - className = 'ibm-highlight'
+
      if(data.secondary_tabs)
        li(role="presentation" class="ibm-haschildlist ibm-highlight")
          span(role="menuitem")=data.label
@@ -683,7 +689,7 @@ mixin tabV18(data, active)
                a(role="menuitem" href=sub.href aria-label=sub.label onclick="#{sub.onClick}")=sub.label
 
      else
-       li(role="presentation")
+       li(role="presentation" class="#{className}")
          a(role="menuitem" href=data.href aria-label=data.label onclick="#{data.onClick}")=data.label
 
 mixin bluemixTable
@@ -761,36 +767,38 @@ mixin bluemixTable
 mixin featureGridHome
   .featured-tiles
     section.co_wrapper_tile
-      .anchor-el.co_tile_1.bg-image-cover.featured-content(style='background-image:url(/images/blockchain/IBM_Blockchain_Homepage_OfferTile.jpg)', data-href='http://www.softlayer.com/info/five-hundred')
+      .anchor-el.co_tile_1.bg-image-cover.featured-content(style='background-image:url(/images/blockchain/home-featured-content-tile.jpg)', data-href='http://www.softlayer.com/info/five-hundred')
         //p.ibm-small.tile-cat.ibm-light PRODUCT
         .tile-content.tile-content-bottom
-          a.ibm-textcolor-white-core.ibm-h3.ibm-external-link.ibm-inlinelink.ibm-icon-after.ibm-light Experiment with IBM Blockchain in the Bluemix Sandbox
-          p.ibm-textcolor-white-core Get tutorials, code samples and see what you can build with IBM Blockchain on Bluemix.
+          a.ibm-textcolor-black-core.ibm-h3.ibm-forward-link.ibm-inlinelink.ibm-icon-after.ibm-bold
+            | The basics of <br> blockchain
+          p.ibm-textcolor-black-core 
+            | Reimagine your most<br>fundamental transactions
     section.co_wrapper_tile.ibm-widget-processed(data-widget='setsameheight', data-items='p.tile-copy')
-      .tile-sm.anchor-el.co_tile_2.ibm-background-green-40(data-href='http://www.ibm.com/cloud-computing/bluemix/')
+      .tile-sm.anchor-el.co_tile_2.ibm-background-green-40.bg-image-cover(data-href='http://www.ibm.com/cloud-computing/bluemix/' style='background-image:url(/images/blockchain/home-tile-sm1.jpg)')
         p.ibm-textcolor-white-core.ibm-hidden-small.tile-cat.tile-content.ibm-small.ibm-light
-          span.ibm-hidden-small Video
+          span.ibm-hidden-small EXECUTIVE REPORT
         .tile-content.tile-content-bottom
-          a.ibm-textcolor-white-core.ibm-h3.ibm-external-link.ibm-inlinelink.ibm-icon-after.ibm-light Hyperledger – See how IBM joined The Linux Foundation to advance Blockchain
-          //p.ibm-textcolor-white-core.tile-copy(style='height: 52px;') Move faster on both sides of the firewall.
-      .tile-sm.anchor-el.co_tile_3.ibm-background-green-core(data-href='http://www.ibm.com/cloud-computing/solutions/video/')
+          a.ibm-textcolor-white-core.ibm-h3.ibm-external-link.ibm-inlinelink.ibm-icon-after.ibm-bold Transform<br>the enterprise
+          p.ibm-light.ibm-textcolor-white-core.tile-copy(style='height: 52px;') Rethinking enterprises, ecosystems, and economies with blockchains
+      .tile-sm.anchor-el.co_tile_3.ibm-background-green-core.bg-image-cover(data-href='http://www.ibm.com/cloud-computing/solutions/video/' style='background-image:url(/images/blockchain/home-tile-sm2.jpg)')
         p.ibm-textcolor-white-core.ibm-hidden-small.tile-cat.tile-content.ibm-small.ibm-light
-          span.ibm-hidden-small Video
+          span.ibm-hidden-small WEB PAGE
         .tile-content.tile-content-bottom
-          a.ibm-textcolor-white-core.ibm-h3.ibm-external-link.ibm-inlinelink.ibm-icon-after.ibm-light See how one car leasing company sped up transactions using IBM Blockchain
-          //p.ibm-textcolor-white-core.tile-copy(style='height: 52px;') The crowd wants the video. You want the crowd.
-      .tile-sm.anchor-el.co_tile_4.ibm-background-green-core(data-href='https://www.ibm.com/cloud-computing/infrastructure/object-storage/index.html')
+          a.ibm-textcolor-white-core.ibm-h3.ibm-forward-link.ibm-inlinelink.ibm-icon-after.ibm-bold Watson IoT<br>and Blockchain
+          p.ibm-light.ibm-textcolor-white-core.tile-copy(style='height: 52px;') Discover what's possible when you connect devices to blockchain
+      .tile-sm.anchor-el.co_tile_4.ibm-background-green-core.bg-image-cover(data-href='https://www.ibm.com/cloud-computing/infrastructure/object-storage/index.html' style='background-image:url(/images/blockchain/home-tile-sm3.jpg)')
         p.ibm-textcolor-white-core.ibm-hidden-small.tile-cat.tile-content.ibm-small.ibm-light
-          span.ibm-hidden-small Webpage
+          span.ibm-hidden-small WEB PAGE
         .tile-content.tile-content-bottom
-          a.ibm-textcolor-white-core.ibm-h3.ibm-external-link.ibm-inlinelink.ibm-icon-after.ibm-light IoT and Blockchain
-          //p.ibm-textcolor-white-core.tile-copy(style='height: 52px;') Unmatched choice and flexibility with hybrid cloud object storage.
-      .tile-sm.anchor-el.co_tile_5.ibm-background-green-60(data-href='https://www.ibm.com/cloud-computing/built-on-cloud')
+          a.ibm-textcolor-white-core.ibm-h3.ibm-forward-link.ibm-inlinelink.ibm-icon-after.ibm-bold Business Solutions
+          p.ibm-light.ibm-textcolor-white-core.tile-copy(style='height: 52px;') What can IBM Blockchain do for you business?
+      .tile-sm.anchor-el.co_tile_5.ibm-background-green-60.bg-image-cover(data-href='https://www.ibm.com/cloud-computing/built-on-cloud' style='background-image:url(/images/blockchain/home-tile-sm4.jpg)')
         p.ibm-textcolor-white-core.ibm-hidden-small.tile-cat.tile-content.ibm-small.ibm-light
-          span.ibm-hidden-small Webpage
+          span.ibm-hidden-small VIDEO
         .tile-content.tile-content-bottom
-          a.ibm-textcolor-white-core.ibm-h3.ibm-external-link.ibm-inlinelink.ibm-icon-after.ibm-light Find out how Blockchain is re-shaping the business landscape
-          //p.ibm-textcolor-white-core.tile-copy(style='height: 52px;') Expertise-rich SaaS apps running on a scalable cloud infrastructure.
+          a.ibm-textcolor-white-core.ibm-h3.ibm-external-link.ibm-inlinelink.ibm-icon-after.ibm-bold Use Case
+          p.ibm-light.ibm-textcolor-white-core.tile-copy(style='height: 52px;') See how blockchain technology impacts the supply chain process for a simple car lease
 
 mixin featureGridForBusiness
   .featured-tiles

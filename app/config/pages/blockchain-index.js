@@ -40,9 +40,9 @@ module.exports = {
               ],
       leadspace:{
           parallax: false,
-          leadspaceimg: "/images/blockchain/IBM_Blockchain_Homepage_Hero.jpg",
+          leadspaceimg: "/images/blockchain/home-hero.jpg",
           social:{
-            enabled: true
+            enabled: false
           },
           features: {
               enabled: false,
@@ -61,14 +61,14 @@ module.exports = {
                   img:""
               },
           },
-          header: "Experience IBM Blockchain",
+          header: "Transforming your business networks with blockchain",
           subhead: "Transaction driven transformation",
-          paragraph: "IBM Blockchain empowers businesses to move assets and capital securely around the globe in the blink of an eye. It's shared ledger -- open to known members only -- sits on a permissioned network making all transactions fast, secure and confidential.",
+          paragraph: "IBM Blockchain empowers businesses to move assets through a highly-secure,<br>shared and replicated ledger.",
           primary_cta:{
               enabled: true,
               cta:{
                   href:"##_REPLACE_ME_##",
-                  text: "Explore IBM Blockchain",
+                  text: "Change the way you do business",
                   onClick:""
               }
           },
@@ -88,11 +88,57 @@ module.exports = {
       },
       modules:[
         {
-          temp:"products",
-          content:{
-            class:"ibm-band ibm-padding-top-2",
-            headline:"IBM Blockchain in application",
-          }
+            temp:"feature2col",
+            content:{
+              class:"ibm-band ibm-padding-top-3 ibm-padding-bottom-3 home-developers-section",
+              background:"background: #FFFFFF url(/images/blockchain/home-developers-band-bg.png) right 0 no-repeat; background-size:auto 100%;",
+              headline:"",
+              setsameheight:{
+                class:".ibm-col-6-3",
+              },
+              cards:[
+                  {
+                    class:"ibm-col-6-3 ",
+                    imagetop:{
+                      style:"width:40px;height:40px;",
+                      src:"/images/blockchain/Bluemix-logo.png",
+                      alt:"Bluemix logo"
+                    },
+                    subhead:"<strong>Developers: Try out IBM Blockchain on a test network for free</strong>",
+                    text:"IBM Blockchain gives developers a wide variety of options to choose from when building a high security business network (HSBN.) Options range from simple and basic to more advanced.",
+                    cta:{
+                      parentClass:"ibm-button-link ibm-padding-top-1",
+                      class:" ibm-btn-sec",
+                      text:"Try out IBM Blockchain now",
+                      url:"#",
+                      target:"_blank",
+                      onClick:""
+                    }
+                  },
+                  {
+                    class:"ibm-col-6-3 developers-col-2",
+                    background:"box-sizing:border-box;padding:50px 0 0 80px;background: #FFFFFF url(/images/blockchain/home-developers-card-bg.jpg) center center no-repeat; background-size:cover;",
+                    subhead:{
+                      text:"Here are a few examples:",
+                      class:"ibm-textcolor-white-core"
+                    },
+                    list:[
+                      {
+                        text: "Hyperledger Fabric source code",
+                        class:"ibm-textcolor-white-core"
+                      },
+                      {
+                        text: "IBM Blockchain on Bluemix",
+                        class:"ibm-textcolor-white-core"
+                      },
+                      {
+                        text: "Docker images deployed to IBM<br>Cloud and z System mainframes",
+                        class:"ibm-textcolor-white-core"
+                      },
+                    ],
+                  },
+              ]
+            }
         },
         {
           temp: "featureGridHome"

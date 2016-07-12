@@ -319,8 +319,13 @@ div[class*=co_tile_1],div[class*=co-tile-1] {
     position: absolute;
     bottom: 0
 }
-.featured-tiles .featured-content .tile-content-bottom a:after {
-    content: "\f131"!important
+.featured-tiles .featured-content .tile-content-bottom a.ibm-external-link:after {
+    content: "\f131"!important;
+    right: 18px!important;
+}
+.featured-tiles .featured-content .tile-content-bottom a.ibm-forward-link:after {
+    content: "\f13a"!important;
+    right: 18px!important;
 }
 @media (max-width: 1239px) {
     .featured-tiles .featured-content .tile-content-bottom {
@@ -343,8 +348,11 @@ div[class*=co_tile_1],div[class*=co-tile-1] {
     bottom: 30px;
     padding: 0 30px
 }
-.featured-tiles .tile-sm .tile-content-bottom a:after {
+.featured-tiles .tile-sm .tile-content-bottom a.ibm-external-link:after {
     content: "\f131"!important
+}
+.featured-tiles .tile-sm .tile-content-bottom a.ibm-forward-link:after {
+    content: "\f13a"!important
 }
 @media (max-width: 1239px) {
     .featured-tiles .tile-sm .tile-content-bottom {
@@ -376,4 +384,8 @@ div[class*=co_tile_1],div[class*=co-tile-1] {
    background-position: center center;
    background-repeat: no-repeat;
    position: relative;
+}
+
+.home-developers-section li:before{
+  color:#ffffff;
 }
