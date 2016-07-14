@@ -627,6 +627,57 @@ module.exports = {
             ]
           }
       },
+      {
+        temp:"products",
+        content:{
+          background:"background-color:#fff;",
+          class:"ibm-band ibm-padding-top-2",
+          headline:"Blockchain fundamentals",
+          text:"Blockchain is a peer-to-peer distributed ledger technology that makes and verifies transactions nearly instantaneous—streamlining complex processes, minimizing costs, and reducing the risk of fraud. At its core, the distributed ledger makes it easier to create cost-efficient business networks where virtually anything of value can be tracked and traded without a central point of control. The result is a more transparent, safe and seamless infrastructure that can transform the way businesses and organizations conduct transactions globally.",
+          cards:{
+            class:"ibm-col-6-4 ibm-center-block",
+            card:[
+              {
+                class:"ibm-card--noborder",
+                image:{
+                  src:"/images/blockchain/IBM_Blockchain_Whatis_Illustration-01.svg",
+                  alt:"image alt text"
+                },
+              }
+            ]
+          }
+        }
+      },
+      {
+        temp:"products",
+        content:{
+          background:"background-color:#fff;",
+          class:"ibm-band ibm-padding-top-2",
+          headline:"How blockchain can work for you?",
+          text:"The applications of blockchain is showing great promise across a broad range of business applications, including IoT networks, gaming, multi-media rights management, car rental, government proof of identity (or license) creation and insurance record management.<br><br>For example, in the financial industry, blockchain allows securities to be settled in minutes instead of days. It can also be used to help businesses manage the flow of goods and related payments, or enable manufacturers to share production logs with OEMs and regulators to reduce product recalls.",
+          cards:{
+            class:"ibm-col-6-4 ibm-center-block ibm-card--noborder",
+            card:[
+              {
+                class:"ibm-card--noborder",
+                image:{
+                  src:"/images/blockchain/IBM_Blockchain_Whatis_Illustration-02.svg",
+                  alt:"image alt text"
+                },
+              }
+            ]
+          }
+        }
+      },
+      {
+        temp:"products",
+        content:{
+          background:"background-color:#fff;",
+          class:"ibm-band ibm-padding-top-2",
+          headline:"The IBM Approach to Blockchain",
+          text:"IBM offers secure and scalable technology platforms, deep industry expertise, and a proven engagement model to help clients build successful blockchain solutions. IBM is also a premier member of Linux Foundation’s Hyperledger Project, a cross-enterprise collaborative effort to create a blockchain for business.",
+        }
+      },
     ]// end modules
 
   }// end Main content

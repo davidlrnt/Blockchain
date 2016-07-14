@@ -3,9 +3,9 @@ module.exports = {
     optional_path: ".html",
     global_navigation: {},
     content:{
-      is_index: false,
+      is_index: true,
       google_site_verification:"",
-      pagetitle:'IBM Blockchain for Business',
+      pagetitle:'What is IBM Blockchain?',
       meta_description:'IBM Blockchain and the revolutionary shared ledger technology can help your enterprise business solve complex problems now and in the near future.',
       meta_keywords:'blockchain',
       canonical:'http://www.ibm.com/blockchain/what-is-blockchain',
@@ -40,7 +40,7 @@ module.exports = {
               ],
       leadspace:{
           class:"",
-          leadspaceimg: "/images/blockchain/IBM_Blockchain_WhatisBlockchain_Hero.jpg",
+          leadspaceimg: "/images/blockchain/Whatis-hero.png",
           social:{
             enabled: false
           },
@@ -61,8 +61,9 @@ module.exports = {
                   img:""
               },
           },
-          header: "What is Blockchain?",
-          subhead: "IBM Blockchain re-imagines your most fundamental business interactions and opens the door to new styles of digital interactions.",
+          header: "Reimagine your most fundamental transactions",
+          subhead: "Blockchain is a new technology that some are welcoming as an opportunity to innovate and refine while others are viewing it as a potential disruption. IBM’s point of view is that Blockchain is an important technology for transactions enabling global business to move with less friction.",
+          paragraph: "Blockchain is a new technology that some are welcoming as an opportunity to innovate and refine while others are viewing it as a potential disruption. IBM’s point of view is that Blockchain is an important technology for transactions enabling global business to move with less friction.",
           primary_cta:{
               enabled: false,
               cta:{
@@ -87,80 +88,217 @@ module.exports = {
       },
       modules:[
         {
-          temp:"products",
-          content:{
-            background:"background-color:#fff;",
-            class:"ibm-band ibm-padding-top-2",
-            headline:"Blockchain fundamentals",
-            text:"Blockchain is a peer-to-peer distributed ledger technology that makes and verifies transactions nearly instantaneous—streamlining complex processes, minimizing costs, and reducing the risk of fraud. At its core, the distributed ledger makes it easier to create cost-efficient business networks where virtually anything of value can be tracked and traded without a central point of control. The result is a more transparent, safe and seamless infrastructure that can transform the way businesses and organizations conduct transactions globally.",
-            cards:{
-              class:"ibm-col-6-4 ibm-center-block",
-              card:[
+            temp:"feature2col",
+            content:{
+              class:"ibm-band ibm-padding-top-2",
+              headline:"",
+              text:"",
+              cards:[
                 {
-                  class:"ibm-card--noborder",
-                  image:{
-                    src:"/images/blockchain/IBM_Blockchain_Whatis_Illustration-01.svg",
-                    alt:"image alt text"
+                  class:"ibm-col-6-3 ",
+                  background:"padding: 0 20px;box-sizing: border-box;",
+                  video:{
+                    title:"IBM Joins Linux Foundation to Advance Blockchain Hyperledger",
+                    display:"inline",
+                    url:"https://www.youtube.com/watch?v=4RRD4Jy6aWw",
+                    id:"4RRD4Jy6aWw",
+                    type:"youtube",
+                    img:"/images/blockchain/Whatis-3min-video.png",
                   },
-                }
-              ]
-            }
-          }
-        },
-        // {
-        //   temp:"products",
-        //   content:{
-        //     background:"background-color:#fff;",
-        //     class:"ibm-band ibm-padding-top-2",
-        //     headline:"How blockchain can work for you?",
-        //     text:"The applications of blockchain is showing great promise across a broad range of business applications, including IoT networks, gaming, multi-media rights management, car rental, government proof of identity (or license) creation and insurance record management.<br><br>For example, in the financial industry, blockchain allows securities to be settled in minutes instead of days. It can also be used to help businesses manage the flow of goods and related payments, or enable manufacturers to share production logs with OEMs and regulators to reduce product recalls.",
-        //   }
-        // },
-        {
-          temp:"products",
-          content:{
-            background:"background-color:#fff;",
-            class:"ibm-band ibm-padding-top-2",
-            headline:"How blockchain can work for you?",
-            text:"The applications of blockchain is showing great promise across a broad range of business applications, including IoT networks, gaming, multi-media rights management, car rental, government proof of identity (or license) creation and insurance record management.<br><br>For example, in the financial industry, blockchain allows securities to be settled in minutes instead of days. It can also be used to help businesses manage the flow of goods and related payments, or enable manufacturers to share production logs with OEMs and regulators to reduce product recalls.",
-            cards:{
-              class:"ibm-col-6-4 ibm-center-block ibm-card--noborder",
-              card:[
+                },
                 {
-                  class:"ibm-card--noborder",
-                  image:{
-                    src:"/images/blockchain/IBM_Blockchain_Whatis_Illustration-02.svg",
-                    alt:"image alt text"
-                  },
-                }
-              ]
-            }
-          }
-        },
-        {
-          temp:"products",
+                  class:"ibm-col-6-3 ",
+                  background:"padding: 0 20px;box-sizing: border-box;",
+                  subhead:
+                    {
+                      class:"ibm-h2 ibm-light",
+                      text:"Blockchain is used to create a peer-to-peer distributed ledger that is based on permissions rather than public access, allowing parties to choose who can see their information.",
+                    },
+                    text:"The result is a more transparent, safe and seamless network that can transform the way businesses and organizations conduct transactions.",
+                    cta:{
+                      parentClass:"ibm-button-link ibm-padding-top-1",
+                      class:" ibm-btn-sec ibm-video-placeholder",
+                      text:"Watch now",
+                      url:"https://youtu.be/4RRD4Jy6aWw",
+                      target:"",
+                      onClick:"",
+                      video:{
+                        display:"overlay",
+                        url:"https://youtu.be/4RRD4Jy6aWw",
+                        id:"4RRD4Jy6aWw",
+                        type:"youtube",
+                      },
+                    }
+                },
+          ]
+
+        }
+      },
+      {
+          temp:"feature2col",
           content:{
-            background:"background-color:#fff;",
             class:"ibm-band ibm-padding-top-2",
-            headline:"The IBM Approach to Blockchain",
-            text:"IBM offers secure and scalable technology platforms, deep industry expertise, and a proven engagement model to help clients build successful blockchain solutions. IBM is also a premier member of Linux Foundation’s Hyperledger Project, a cross-enterprise collaborative effort to create a blockchain for business.",
-          }
-        },
+            background:"background: #FFFFFF url(/images/blockchain/Whatis-work-bg.png) center center no-repeat; background-size:cover;",
+            headline:"",
+            text:"",
+            cards:[
+              {
+                class:"ibm-col-6-3 ",
+                background:"padding: 0 20px;box-sizing: border-box;",
+                subhead:
+                  {
+                    class:"ibm-h2 ibm-bold ibm-fontsize-x25",
+                    text:"Applying<br>blockchain<br>across industries",
+                  },
+              },
+              {
+                class:"ibm-col-6-3 ",
+                background:"padding: 0 20px;box-sizing: border-box;",
+                subhead: "Blockchain is showing great promise across a wide range of business applications including: ",
+                list:[
+                  {
+                    text: "Finance",
+                  },
+                  {
+                    text: "Manufacturing",
+                  },
+                  {
+                    text: "IoT networks",
+                  },
+                  {
+                    text: "Gaming",
+                  },
+                  {
+                    text: "Multimedia rights management",
+                  },
+                  {
+                    text: "Government proof-of-identity (or license) creation",
+                  },
+                  {
+                    text: "Insurance record management",
+                  },
+                ],
+                text:"For example, in the financial industry, blockchain allows securities to be settled in minutes instead of days. It can also be used to help businesses manage the flow of goods and related payments, or enable manufacturers to share production logs with original equipment manufacturers (OEMs) and regulators to reduce product recalls.",
+                cta:{
+                  parentClass:"ibm-button-link ibm-padding-top-1",
+                  class:" ibm-btn-sec ibm-video-placeholder",
+                  text:"Learn more about blockchain and business",
+                  url:"##__Replace__##",
+                  target:"",
+                  onClick:"",
+                }
+              },
+        ]
+
+      }
+      },
+      {
+          temp:"feature2col",
+          content:{
+            class:"ibm-band ibm-padding-top-2",
+            background:"background: #FFFFFF url(/images/blockchain/Whatis-hyperledger-bg.png) center center no-repeat; background-size:cover;",
+            headline:"",
+            text:"",
+            cards:[
+              {
+                class:"ibm-col-6-3 ",
+                background:"padding: 0 20px;box-sizing: border-box;",
+                subhead:
+                  {
+                    class:"ibm-h2 ibm-bold ibm-fontsize-x25",
+                    text:"The IBM<br>approach<br>to blockchain",
+                  },
+                  text:"IBM is a premier member of Linux Foundation’s Hyperledger Project, a cross-enterprise collaborative effort to create a blockchain for business. In early 2016, IBM donated 44,000 lines of code to help the advancement of distributed ledger technology across industries.",
+                  cta:{
+                    parentClass:"ibm-button-link ibm-padding-top-1",
+                    class:" ibm-btn-sec ibm-video-placeholder",
+                    text:"Find out more about the Hyperledger project",
+                    url:"##__ReplaceWithHyperledger__##",
+                    target:"",
+                    onClick:"",
+                  }
+              },
+              {
+                class:"ibm-col-6-3 ",
+                background:"padding: 0 20px;box-sizing: border-box;",
+                subhead: "Blockchain is showing great promise across a wide range of business applications including: ",
+                text:"For example, in the financial industry, blockchain allows securities to be settled in minutes instead of days. It can also be used to help businesses manage the flow of goods and related payments, or enable manufacturers to share production logs with original equipment manufacturers (OEMs) and regulators to reduce product recalls.",
+              }
+        ]
+       }
+      },
       {
         temp:"products",
         content:{
-          class:"ibm-band ibm-padding-top-2 ibm-background-green-core",
-          headline:"Get started with IBM Blockchain",
-          cta:{
-            parentClass:"ibm-alternate-background ibm-btn-link ibm-padding-top-2",
-            class:" ibm-btn-pri ibm-btn-white",
-            text:"See how IBM can help",
-            url:"#",
-            target:"_blank",
-            onClick:""
+          parallax:"true",
+          class:"ibm-band ibm-padding-top-2 ibm-center-block",
+          background:"background-image: url(/images/blockchain/Whatis-quote-bg.png); background-position: 50% 0%",
+          headline:"",
+          cards:{
+            class:"ibm-col-6-5 ibm-center ibm-center-block",
+            style:"border:none;background-color:transparent;",
+            card:[
+              {
+                pullQuote:{
+                  class:"ibm-h2 ibm-textcolor-white-core",
+                  text: "As with any early-stage, highly-complex technology that demonstrates the ability to change the way we live our lives and conduct business, blockchain demands a cross-industry, open source collaboration to advance the technology for all.",
+                  source:{
+                    class:" ibm-textcolor-white-core",
+                    text: "&mdash; Jim Zemlin, Executive Director, Linux Foundation"
+                  }
+                }
+              }
+            ]
           }
         }
-      }
+      },
+      {
+        temp:"products",
+        content:{
+          class:"ibm-band ibm-padding-top-2",
+          background:"",
+          headline:{class:"ibm-h2 ibm-bold" ,text:"The three C’s of IBM Blockchain"},
+          text:"The three key differentiators that make IBM’s approach to blockchain unique are:",
+          cards:{
+            class:"ibm-col-6-2",
+            card:[
+              {
+                class:"ibm-center ibm-padding-top-2",
+                image:{
+                  style:"width:100px;",
+                  src:"/images/blockchain/Whatis-c1-code.png",
+                  alt:"Code"
+                },
+                subhead:{class:"ibm-h3 ibm-textcolor-gray-50", text:"Code"},
+                text:{class:"ibm-textcolor-gray-50", text:"Open source code built from the ground up. The Linux Foundation's Hyperledger Project has over 50 members and growing."},
+              },
+              {
+                class:"ibm-center ibm-padding-top-2",
+                image:{
+                  style:"width:100px;",
+                  src:"/images/blockchain/Whatis-c2-cloud.png",
+                  alt:"Cloud"
+                },
+                subhead:{class:"ibm-h3 ibm-textcolor-gray-50", text:"Cloud"},
+                text:{class:"ibm-textcolor-gray-50", text:"Value-added services on Bluemix and SoftLayer cover critical business areas such as, high-availability, compliance, security, performance, and more."},
+              },
+              {
+                class:"ibm-center  ibm-padding-top-2",
+                image:{
+                  style:"width:100px;",
+                  src:"/images/blockchain/Whatis-c3-client.png",
+                  alt:"Client"
+                },
+                subhead:{class:"ibm-h3 ibm-textcolor-gray-50", text:"Client"},
+                text:{class:"ibm-textcolor-gray-50", text:"Hands on engagement model led by the IBM Bluemix Garage for blockchain, helps build use cases to solve business problems with blockchain technology."},
+              },
+            ]
+
+          }
+        }
+      },
+      {temp:"launchingBlockchain"}
+
     ]
     }
 } // for business page

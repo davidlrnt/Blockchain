@@ -39,6 +39,7 @@ module.exports = {
                   },
               ],
       leadspace:{
+        class:"ibm-alternate-background",
           parallax: false,
           leadspaceimg: "/images/blockchain/home-hero.jpg",
           social:{

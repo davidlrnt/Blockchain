@@ -621,7 +621,7 @@ mixin card(obj, type)
 
 
 mixin products(obj)
-  div(style=obj.content.background class=obj.content.class)
+  div(style=obj.content.background class=obj.content.class)&attributes(obj.content.parallax ? {"data-widget":"parallaxscroll", "data-disablesmallgrid":"true"}:'')
     if(obj.content.headline)
       div(class="ibm-columns ibm-padding-bottom-1")
         div(class="ibm-col-6-4 ibm-center-block ibm-center")
