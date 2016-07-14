@@ -288,8 +288,12 @@ mixin list(obj)
 
 mixin cta(obj)
   //-var style = (obj.style) ? obj.style : ""
-  p(class= (obj.parentClass) ? obj.parentClass : "ibm-btn-link ibm-padding-top-1" (obj.style) ? style=obj.style : "")
-    a(href=obj.url)&attributes( (obj.class) ? {'class':obj.class} : '', (obj.onClick) ? {'onclick':obj.onClick} : '', (obj.target) ? {'target':obj.target} : '') !{obj.text}
+  if (obj.video)
+    p(class= (obj.parentClass) ? obj.parentClass : "ibm-btn-link ibm-padding-top-1" (obj.style) ? style=obj.style : "")
+      a(href=obj.url data-videodisplay=obj.video.display  data-videoid=obj.video.id data-videotype=obj.video.type data-widget="videoplayer" data-overlayplayersize="large" data-showvideoduration="false" data-showvideotitle="false" )&attributes( (obj.class) ? {'class':obj.class} : '', (obj.onClick) ? {'onclick':obj.onClick} : '', (obj.target) ? {'target':obj.target} : '') !{obj.text}
+  else
+    p(class= (obj.parentClass) ? obj.parentClass : "ibm-btn-link ibm-padding-top-1" (obj.style) ? style=obj.style : "")
+      a(href=obj.url )&attributes( (obj.class) ? {'class':obj.class} : '', (obj.onClick) ? {'onclick':obj.onClick} : '', (obj.target) ? {'target':obj.target} : '') !{obj.text}
 
 
 
@@ -356,6 +360,18 @@ mixin image(obj)
  else
    img(src=obj.src class="ibm-resize")&attributes( (obj.class) ? {'class':obj.class} : '', (obj.style) ? {'style': obj.style} : '', (obj.alt ) ? {'alt':obj.alt} : '')
 
+mixin mediaObject(obj)
+  .ibm-mo.ibm-mo--top
+    .ibm-mo__image
+      if(obj.image)
+        +image(obj.image)
+    .ibm-mo__body
+      if(obj.subhead)
+        +subhead(obj.subhead)
+      if(obj.text)
+        +text(obj.text)
+      if(obj.cta)
+        +cta(obj.cta)
 
 mixin icon(obj)
  if(obj.url && obj.url != "")
@@ -587,17 +603,16 @@ mixin cardContent(c)
        +ctagroup(c.ctagroup)
 
 
-mixin card(obj)
-
+mixin card(obj, type)
  if(obj instanceof Array)
-   div(data-widget="setsameheight" data-items=".ibm-card" class="ibm-columns ibm-cards ibm-textcolor-black-core")
+   div(data-widget="setsameheight" data-items=".ibm-card" class="ibm-columns ibm-cards ibm-textcolor-black-core")&attributes(type == 'seamless' ? {"class":"ibm-seamless"}: '')
      for c in obj
        .wow.fadeIn()&attributes( (c.class) ? {'class':c.class} : {'class':''})
          .ibm-card.ibm-center()&attributes( (c.style) ? {'style':c.style} : {'style':''})
            +cardContent(c)
 
  else
-   div(data-widget="setsameheight" data-items=".ibm-card" class="ibm-columns ibm-cards ibm-textcolor-black-core")
+   div(data-widget="setsameheight" data-items=".ibm-card" class="ibm-columns ibm-cards ibm-textcolor-black-core")&attributes(type == 'seamless' ? {"class":"ibm-seamless"}: '')
      for c in obj.card
        div( class="wow fadeIn" )&attributes( (obj.class) ? {'class':obj.class} : {'class':''})
          div(class=(c.class!=undefined)?"ibm-card  #{c.class}":"ibm-card " style="#{obj.style} "+c.style)
@@ -617,7 +632,7 @@ mixin products(obj)
           if(obj.content.text)
             +text(obj.content.text)
     if(obj.content.cards)
-      +card(obj.content.cards)
+      +card(obj.content.cards, obj.content.type)
     if(obj.content.cta)
       div(class="ibm-columns ibm-center")
         +cta(obj.content.cta)
@@ -640,6 +655,8 @@ mixin feature2col(obj)
     div(class="ibm-columns")&attributes(obj.content.setsameheight ? {"data-widget":"setsameheight", "data-items":obj.content.setsameheight.class} : '')
       for c in obj.content.cards
         div(style="#{c.background}" class=c.class)
+          if(c.mediaObject)
+            +mediaObject(c.mediaObject)
           if(c.imagetop)
             +image(c.imagetop)
           if(c.eyebrow)
@@ -767,7 +784,7 @@ mixin bluemixTable
 mixin featureGridHome
   .featured-tiles
     section.co_wrapper_tile
-      .anchor-el.co_tile_1.bg-image-cover.featured-content(style='background-image:url(/images/blockchain/home-featured-content-tile.jpg)', data-href='http://www.softlayer.com/info/five-hundred')
+      .anchor-el.co_tile_1.bg-image-cover.featured-content(style='background-image:url(/images/blockchain/home-featured-content-tile.jpg)', data-href='/blockchain/what-is-blockchain')
         //p.ibm-small.tile-cat.ibm-light PRODUCT
         .tile-content.tile-content-bottom
           a.ibm-textcolor-black-core.ibm-h3.ibm-forward-link.ibm-inlinelink.ibm-icon-after.ibm-bold
@@ -775,29 +792,29 @@ mixin featureGridHome
           p.ibm-textcolor-black-core 
             | Reimagine your most<br>fundamental transactions
     section.co_wrapper_tile.ibm-widget-processed(data-widget='setsameheight', data-items='p.tile-copy')
-      .tile-sm.anchor-el.co_tile_2.ibm-background-green-40.bg-image-cover(data-href='http://www.ibm.com/cloud-computing/bluemix/' style='background-image:url(/images/blockchain/home-tile-sm1.jpg)')
+      .tile-sm.anchor-el.co_tile_2.ibm-background-green-40.bg-image-cover(data-ga-outbound="true" data-href='https://www-935.ibm.com/services/us/gbs/thoughtleadership/blockchain/?1' style='background-image:url(/images/blockchain/home-tile-sm1.jpg)')
         p.ibm-textcolor-white-core.ibm-hidden-small.tile-cat.tile-content.ibm-small.ibm-light
           span.ibm-hidden-small EXECUTIVE REPORT
         .tile-content.tile-content-bottom
           a.ibm-textcolor-white-core.ibm-h3.ibm-external-link.ibm-inlinelink.ibm-icon-after.ibm-bold Transform<br>the enterprise
           p.ibm-light.ibm-textcolor-white-core.tile-copy(style='height: 52px;') Rethinking enterprises, ecosystems, and economies with blockchains
-      .tile-sm.anchor-el.co_tile_3.ibm-background-green-core.bg-image-cover(data-href='http://www.ibm.com/cloud-computing/solutions/video/' style='background-image:url(/images/blockchain/home-tile-sm2.jpg)')
+      .tile-sm.anchor-el.co_tile_3.ibm-background-green-core.bg-image-cover(data-ga-outbound="true" data-href='https://discover-iot-blockchain.eu-gb.mybluemix.net/iot-blockchain.html' style='background-image:url(/images/blockchain/home-tile-sm2.jpg)')
         p.ibm-textcolor-white-core.ibm-hidden-small.tile-cat.tile-content.ibm-small.ibm-light
           span.ibm-hidden-small WEB PAGE
         .tile-content.tile-content-bottom
-          a.ibm-textcolor-white-core.ibm-h3.ibm-forward-link.ibm-inlinelink.ibm-icon-after.ibm-bold Watson IoT<br>and Blockchain
+          a.ibm-textcolor-white-core.ibm-h3.ibm-external-link.ibm-inlinelink.ibm-icon-after.ibm-bold Watson IoT<br>and Blockchain
           p.ibm-light.ibm-textcolor-white-core.tile-copy(style='height: 52px;') Discover what's possible when you connect devices to blockchain
-      .tile-sm.anchor-el.co_tile_4.ibm-background-green-core.bg-image-cover(data-href='https://www.ibm.com/cloud-computing/infrastructure/object-storage/index.html' style='background-image:url(/images/blockchain/home-tile-sm3.jpg)')
+      .tile-sm.anchor-el.co_tile_4.ibm-background-green-core.bg-image-cover(data-href='/blockchain/for-business' style='background-image:url(/images/blockchain/home-tile-sm3.jpg)')
         p.ibm-textcolor-white-core.ibm-hidden-small.tile-cat.tile-content.ibm-small.ibm-light
           span.ibm-hidden-small WEB PAGE
         .tile-content.tile-content-bottom
           a.ibm-textcolor-white-core.ibm-h3.ibm-forward-link.ibm-inlinelink.ibm-icon-after.ibm-bold Business Solutions
           p.ibm-light.ibm-textcolor-white-core.tile-copy(style='height: 52px;') What can IBM Blockchain do for you business?
-      .tile-sm.anchor-el.co_tile_5.ibm-background-green-60.bg-image-cover(data-href='https://www.ibm.com/cloud-computing/built-on-cloud' style='background-image:url(/images/blockchain/home-tile-sm4.jpg)')
+      .tile-sm.anchor-el.co_tile_5.ibm-background-green-60.bg-image-cover( data-overlayplayersize="large" data-widget="videoplayer" data-videodisplay="overlay" data-videoid="IgNfoQQ5Reg" data-videotype="youtube" data-showvideoduration="false" data-showvideotitle="false"  style=' margin-bottom:0!important; background-image:url(/images/blockchain/home-tile-sm4.jpg);')
         p.ibm-textcolor-white-core.ibm-hidden-small.tile-cat.tile-content.ibm-small.ibm-light
           span.ibm-hidden-small VIDEO
         .tile-content.tile-content-bottom
-          a.ibm-textcolor-white-core.ibm-h3.ibm-external-link.ibm-inlinelink.ibm-icon-after.ibm-bold Use Case
+          a.ibm-textcolor-white-core.ibm-h3.ibm-forward-link.ibm-inlinelink.ibm-icon-after.ibm-bold Use Case
           p.ibm-light.ibm-textcolor-white-core.tile-copy(style='height: 52px;') See how blockchain technology impacts the supply chain process for a simple car lease
 
 mixin featureGridForBusiness
@@ -868,3 +885,61 @@ mixin featureGridTest
         .tile-content.tile-content-bottom
           a.ibm-textcolor-black-core.ibm-h3.ibm-external-link.ibm-inlinelink.ibm-icon-after.ibm-light Making Blockchain Real for Business
           //p.ibm-textcolor-black-core.tile-copy(style='height: 52px;') Expertise-rich SaaS apps running on a scalable cloud infrastructure.
+
+mixin homeDevelopers
+  .ibm-band.ibm-padding-top-3.ibm-padding-bottom-3.home-developers-section(style='background: #FFFFFF url(/images/blockchain/home-developers-band-bg.png) right 0 no-repeat; background-size:auto 100%;')
+    .ibm-columns(data-widget='setsameheight', data-items='.ibm-col-6-3')
+      .ibm-col-6-3
+        img.ibm-resize(src='/images/blockchain/Bluemix-logo.png', style='width:40px;height:40px;', alt='Bluemix logo')
+        h3.ibm-h3
+          strong Developers: Try out IBM Blockchain on a test network for free
+        p
+          | IBM Blockchain gives developers a wide variety of options to choose from when building a high security business network (HSBN.) Options range from simple and basic to more advanced.
+        p.ibm-button-link.ibm-padding-top-1
+          a.ibm-btn-sec(href='##__ReplaceWithOfferPage__##', target='_blank') Try out IBM Blockchain now
+      .ibm-col-6-3.developers-col-2
+        //.ibm-col-5-2.ibm-center-block(style='box-sizing: border-box; padding: 50px 0px 0px 80px; background: url("/images/blockchain/home-developers-card-bg.jpg") center center / cover no-repeat rgb(255, 255, 255);')
+        .ibm-col-5-2.ibm-center-block.ibm-padding-top-r1(style=' background: url("/images/blockchain/home-developers-card-bg.jpg") center center / cover no-repeat rgb(255, 255, 255);display:flex;')
+          .ibm-col-4-1.ibm-center-block
+            h3.ibm-textcolor-white-core.ibm-custom-padding-top-10 Here are a few examples:
+            ul.ibm-padding-bottom-r1
+              li.ibm-textcolor-white-core.ibm-custom-padding-bottom-10 Hyperledger Fabric source code
+              li.ibm-textcolor-white-core.ibm-custom-padding-bottom-10 IBM Blockchain on Bluemix
+              li.ibm-textcolor-white-core.ibm-custom-padding-bottom-10
+                | Docker images deployed to IBM
+                br
+                | Cloud and z System mainframes
+
+
+mixin launchingBlockchain
+  .ibm-band.ibm-padding-top-2.ibm-background-blue-40.ibm-alternate-background(style='background: #FFFFFF url(/images/blockchain/home-launching-section-bg.png) center center no-repeat; background-size:cover;')
+    .ibm-columns.ibm-padding-bottom-1
+      .ibm-col-6-4.ibm-center-block.ibm-center
+        h2.ibm-h2.ibm-light Launching IBM Blockchain
+    .ibm-columns.ibm-cards.ibm-textcolor-black-core(data-widget='setsameheight', data-items='.ibm-card')
+      .ibm-col-5-4.ibm-center-block
+        .wow.fadeIn.ibm-col-5-2(style="margin:0!important")
+          .ibm-mo.ibm-mo--top
+            .ibm-mo__image
+              img.ibm-resize(src='/images/blockchain/home-contact-now.png', style='width:78px;', alt='IBM Blockchain contact now')
+            .ibm-mo__body
+              .ibm-card.ibm-card--noborder( style='background-color: transparent;')
+                .ibm-card__content.ibm-padding-bottom-1
+                  h3.ibm-h4.ibm-textcolor-white-core.ibm-padding-bottom-1 Contact an expert
+                  p.ibm-light.ibm-textcolor-white-core Talk to someone about what blockchain can do for your business.
+                .ibm-card__bottom
+                  p.ibm-button-link.ibm-padding-top-1
+                    a.ibm-btn-sec.ibm-btn-white(href='##__ReplaceWithFormPage__##') Contact now
+        .wow.fadeIn.ibm-col-5-2(style="margin:0!important")
+          .ibm-mo.ibm-mo--top
+            .ibm-mo__image
+              img.ibm-resize(src='/images/blockchain/home-get-started-now.png', style='width:78px;', alt='IBM Blockchain get started   now')
+            .ibm-mo__body
+              .ibm-card.ibm-card--noborder( style='background-color: transparent;')
+                .ibm-card__content.ibm-padding-bottom-1
+                  h3.ibm-h4.ibm-textcolor-white-core.ibm-padding-bottom-1 Get started with code
+                  p.ibm-light.ibm-textcolor-white-core
+                    | Ready to jump in? Learn how to set up a blockchain network as well as applications that can take advantage of it's capabilities.
+                .ibm-card__bottom
+                  p.ibm-button-link.ibm-padding-top-1
+                    a.ibm-btn-sec.ibm-btn-white(href='/blockchain/getting-started') Get started now

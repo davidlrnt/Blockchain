@@ -17,9 +17,9 @@ module.exports = {
       "demos":                      require('../pages/demos.js'),
 
       "blockchain/index":               require('../pages/blockchain-index.js'),
+      "blockchain/what-is-blockchain":  require('../pages/what-is-blockchain.js'),
       "blockchain/for-business":        require('../pages/for-business.js'),
       "blockchain/basics":              require('../pages/basics.js'),
-      "blockchain/what-is-blockchain":  require('../pages/what-is-blockchain.js'),
       "blockchain/getting-started":     require('../pages/getting-started.js'),
 
     } // END routes

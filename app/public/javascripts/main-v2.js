@@ -19593,7 +19593,9 @@ function(e, t) {
           if ("true" == e(this).attr("data-ga-outbound")){
             trackOutboundLink(e(this).attr("data-href"));
           }else{
-            window.location=e(this).attr("data-href");
+            if (e(this).attr("data-href")){
+              window.location=e(this).attr("data-href");
+            }
           }
         }
         ), e("img.svg").length&&e("img.svg").each(function() {

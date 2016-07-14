@@ -573,7 +573,60 @@ module.exports = {
           ],
 
         }
-      }
+      },
+      {
+          temp:"feature2col",
+          content:{
+            class:"ibm-band ibm-padding-top-3 ibm-padding-bottom-3 home-developers-section",
+            background:"background: #FFFFFF url(/images/blockchain/home-developers-band-bg.png) right 0 no-repeat; background-size:auto 100%;",
+            headline:"",
+            setsameheight:{
+              class:".ibm-col-6-3",
+            },
+            cards:[
+                {
+                  class:"ibm-col-6-3 ",
+                  imagetop:{
+                    style:"width:40px;height:40px;",
+                    src:"/images/blockchain/Bluemix-logo.png",
+                    alt:"Bluemix logo"
+                  },
+                  subhead:"<strong>Developers: Try out IBM Blockchain on a test network for free</strong>",
+                  text:"IBM Blockchain gives developers a wide variety of options to choose from when building a high security business network (HSBN.) Options range from simple and basic to more advanced.",
+                  cta:{
+                    parentClass:"ibm-button-link ibm-padding-top-1",
+                    class:" ibm-btn-sec",
+                    text:"Try out IBM Blockchain now",
+                    url:"#",
+                    target:"_blank",
+                    onClick:""
+                  }
+                },
+                {
+                  class:"ibm-col-6-3 developers-col-2",
+                  background:"box-sizing:border-box;padding:50px 0 0 80px;background: #FFFFFF url(/images/blockchain/home-developers-card-bg.jpg) center center no-repeat; background-size:cover;",
+                  subhead:{
+                    text:"Here are a few examples:",
+                    class:"ibm-textcolor-white-core"
+                  },
+                  list:[
+                    {
+                      text: "Hyperledger Fabric source code",
+                      class:"ibm-textcolor-white-core"
+                    },
+                    {
+                      text: "IBM Blockchain on Bluemix",
+                      class:"ibm-textcolor-white-core"
+                    },
+                    {
+                      text: "Docker images deployed to IBM<br>Cloud and z System mainframes",
+                      class:"ibm-textcolor-white-core"
+                    },
+                  ],
+                },
+            ]
+          }
+      },
     ]// end modules
 
   }// end Main content
