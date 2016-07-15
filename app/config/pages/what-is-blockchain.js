@@ -190,7 +190,7 @@ module.exports = {
                   class:" ibm-btn-sec ibm-video-placeholder",
                   style:"display:inline-block;width:100%;",
                   text:"Learn more about blockchain and business",
-                  url:"##__Replace__##",
+                  url:"/blockchain/for-business",
                   target:"",
                   onClick:"",
                 }
@@ -220,9 +220,9 @@ module.exports = {
                     parentClass:"ibm-button-link ibm-padding-top-1",
                     class:" ibm-btn-sec ibm-video-placeholder",
                     text:"Find out more about the Hyperledger project",
-                    url:"##__ReplaceWithHyperledger__##",
+                    url:"https://www.hyperledger.org",
                     target:"",
-                    onClick:"",
+                    onClick:"trackOutboundLink('https://www.hyperledger.org'); return false;",
                   }
               },
               {
