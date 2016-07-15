@@ -155,7 +155,9 @@ module.exports = {
                 class:"ibm-col-6-3 ",
                 background:"padding: 0 20px;box-sizing: border-box;",
                 subhead: "Blockchain is showing great promise across a wide range of business applications including: ",
-                list:[
+                list:{
+                  style:"display:inline-block;width:25%;float:left;min-width:135px;",
+                  items:[
                   {
                     text: "Finance",
                   },
@@ -168,6 +170,10 @@ module.exports = {
                   {
                     text: "Gaming",
                   },
+                ]},
+                list2:{
+                  style:"display:inline-block;width:70%;float:left;",
+                  items:[
                   {
                     text: "Multimedia rights management",
                   },
@@ -177,11 +183,12 @@ module.exports = {
                   {
                     text: "Insurance record management",
                   },
-                ],
+                ]},
                 text:"For example, in the financial industry, blockchain allows securities to be settled in minutes instead of days. It can also be used to help businesses manage the flow of goods and related payments, or enable manufacturers to share production logs with original equipment manufacturers (OEMs) and regulators to reduce product recalls.",
                 cta:{
                   parentClass:"ibm-button-link ibm-padding-top-1",
                   class:" ibm-btn-sec ibm-video-placeholder",
+                  style:"display:inline-block;width:100%;",
                   text:"Learn more about blockchain and business",
                   url:"##__Replace__##",
                   target:"",
@@ -219,10 +226,13 @@ module.exports = {
                   }
               },
               {
-                class:"ibm-col-6-3 ",
+                class:"ibm-col-6-3 ibm-padding-top-3",
                 background:"padding: 0 20px;box-sizing: border-box;",
-                subhead: "Blockchain is showing great promise across a wide range of business applications including: ",
-                text:"For example, in the financial industry, blockchain allows securities to be settled in minutes instead of days. It can also be used to help businesses manage the flow of goods and related payments, or enable manufacturers to share production logs with original equipment manufacturers (OEMs) and regulators to reduce product recalls.",
+                image:{
+                  style:"",
+                  src:"/images/blockchain/Whatis-hyperledger.png",
+                  alt:"Hyperledger"
+                },
               }
         ]
        }

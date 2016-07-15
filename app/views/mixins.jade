@@ -276,12 +276,17 @@ mixin definitionValueProposition(obj)
 
 
 mixin list(obj)
-  ul
-    for l in obj
+  - var listContent = obj
+  - var style = ''
+  if(obj.items)
+    - style = (obj.style) ? obj.style : ''
+    - listContent = obj.items
+
+  ul(style=style)  
+    for l in listContent
       if(l.url)
         li()&attributes( (l.class) ? {'class':l.class} : '')
           a(href=l.url)&attributes( (l.class) ? {'class':l.class} : '', (l.style) ? {'style':l.style} : '', (l.target) ? {'target':l.target} : '') !{l.text}
-
       else
         li()&attributes( (l.class) ? {'class':l.class} : '') !{l.text}
 
@@ -292,7 +297,7 @@ mixin cta(obj)
     p(class= (obj.parentClass) ? obj.parentClass : "ibm-btn-link ibm-padding-top-1" (obj.style) ? style=obj.style : "")
       a(href=obj.url data-videodisplay=obj.video.display  data-videoid=obj.video.id data-videotype=obj.video.type data-widget="videoplayer" data-overlayplayersize="large" data-showvideoduration="false" data-showvideotitle="false" )&attributes( (obj.class) ? {'class':obj.class} : '', (obj.onClick) ? {'onclick':obj.onClick} : '', (obj.target) ? {'target':obj.target} : '') !{obj.text}
   else
-    p(class= (obj.parentClass) ? obj.parentClass : "ibm-btn-link ibm-padding-top-1" (obj.style) ? style=obj.style : "")
+    p(class= (obj.parentClass) ? obj.parentClass : "ibm-btn-link ibm-padding-top-1" style=(obj.style) ? obj.style : "")
       a(href=obj.url )&attributes( (obj.class) ? {'class':obj.class} : '', (obj.onClick) ? {'onclick':obj.onClick} : '', (obj.target) ? {'target':obj.target} : '') !{obj.text}
 
 
@@ -673,6 +678,8 @@ mixin feature2col(obj)
             +image(c.image)
           if(c.list)
             +list(c.list)
+          if(c.list2)
+            +list(c.list2) 
           if(c.ctagroup)
             +ctagroup(c.ctagroup)
           if(c.cta)
