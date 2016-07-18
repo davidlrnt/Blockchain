@@ -90,6 +90,11 @@ body.ibm-blockchain{
       border: 0!important;
     }
   }
+  .getting-started-resources-section{
+    .ibm-col-6-2{
+      border: 0!important;
+    }
+  }
 }
 
 .leadspace-social{
@@ -447,6 +452,19 @@ div[class*=co_tile_1],div[class*=co-tile-1] {
     border-left: solid 1px #cccccc;
   }
   .home-whats-new-first{
+    border:0;
+  }
+}
+.getting-started-resources-section{
+  padding-top: 0;
+  .ibm-col-6-2{
+    box-sizing: border-box;
+    border-left: solid 1px #cccccc;
+    .ibm-card{
+      border: 0;
+    }
+  }
+  .ibm-columns > :first-child{
     border:0;
   }
 }
