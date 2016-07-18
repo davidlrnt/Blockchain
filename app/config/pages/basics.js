@@ -3,7 +3,7 @@ module.exports = {
     optional_path: ".html",
     global_navigation: {},
     content:{
-      is_index: false,
+      is_index: true,
       google_site_verification:"",
       pagetitle:'IBM Blockchain Basics',
       meta_description:'IBM Blockchain and the revolutionary shared ledger technology can help your enterprise business solve complex problems now and in the near future.',
@@ -60,7 +60,7 @@ module.exports = {
                   img:""
               },
           },
-          header: "Blockchain Basics:<br>The building blocks for tomorrow’s enterprise",
+          header: "Blockchain Basics: The building blocks for tomorrow’s enterprise",
           subhead: "Blockchain enables businesses to transact around the globe faster than ever before.",
           primary_cta:{
               enabled: false,
@@ -210,21 +210,7 @@ module.exports = {
               }
             }
           },
-          {
-            temp:"products",
-            content:{
-              class:"ibm-band ibm-padding-top-2 ibm-background-green-core",
-              headline:"Get started with IBM Blockchain",
-              cta:{
-                parentClass:"ibm-alternate-background ibm-btn-link ibm-padding-top-2",
-                class:" ibm-btn-pri ibm-btn-white",
-                text:"See how IBM can help",
-                url:"#",
-                target:"_blank",
-                onClick:""
-              }
-            }
-          }
+          {temp:"launchingBlockchain"}
         ]
     }
 } // for basics page

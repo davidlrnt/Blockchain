@@ -3,7 +3,7 @@ module.exports = {
     optional_path: ".html",
     global_navigation: {},
     content:{
-      is_index: false,
+      is_index: true,
       google_site_verification:"",
       pagetitle:'IBM Blockchain Getting Started',
       meta_description:'IBM Blockchain and the revolutionary shared ledger technology can help your enterprise business solve complex problems now and in the near future.',
@@ -60,14 +60,14 @@ module.exports = {
                   img:""
               },
           },
-          header: "Getting Started with IBM",
-          subhead: "Lorem ipsum dolor sit amet, vestibulum dictumst, quam nam tortor elementum mauris conubia tortor, massa integer dui, libero pellentesque quis malesuada voluptatum. Metus vitae placerat elit, magna fusce, bibendum sed imperdiet pharetra aenean suspendisse, leo ridiculus, nunc dui rutrum ut tempus non.",
+          header: "Build your first IBM Blockchain application",
+          subhead: "Ibm offers a variety of technical and consulting services to help take your product from idea to execution",
           primary_cta:{
-              enabled: false,
+              enabled: true,
               cta:{
-                  href:"#",
-                  text: "Get started",
-                  onClick:"goPage(this); return false;"
+                  href:"##__ReplaceMe__##",
+                  text: "Get started on Bluemix",
+                  onClick:""
               }
           },
           secondary_cta:{

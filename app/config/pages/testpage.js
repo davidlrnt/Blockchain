@@ -91,6 +91,9 @@ module.exports = {
 
       modules:[
         {
+                  temp: "featureGridHomeV2"
+        },
+        {
                   temp: "featureGridTest"
         },
         {
