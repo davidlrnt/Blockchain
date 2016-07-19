@@ -1029,3 +1029,62 @@ mixin gettingStartedDevelopers
                 | Docker images deployed to IBM
                 br
                 | Cloud and z System mainframes
+
+mixin contactForm
+  .ibm-columns
+    .ibm-col-1-1
+      form#form.ibm-column-form(method='post', onsubmit='return validateForm();')
+        input#campaignid(type='hidden', name='campaignid', value='Blockchain')
+        input#thankyoupage(type='hidden', name='thankyoupage', value='http://www.ibm.com/blockchain/form_thanks.html')
+        input#REQUIREDFIELDS(type='hidden', name='REQUIREDFIELDS', value='NELECADR,NFNAME,NLNAME')
+        input#ERROR_NELECADR(type='hidden', name='ERROR_NELECADR', value='Contact Email')
+        input#sort(type='hidden', name='sort', value='campaignid')
+        input#ncountry(type='hidden', name='ncountry', value='us')
+        p
+          label(for='required')
+            span.ibm-required (* required field)
+          span
+        p
+          label(for='NFNAME')
+            | First name:
+            span.ibm-required *
+          span
+            input#NFNAME(required='', type='text', style='width:300px;', value='', size='40', name='NFNAME')
+        p
+          label(for='NLNAME')
+            | Last name:
+            span.ibm-required *
+          span
+            input#NLNAME(required='', type='text', style='width:300px;', value='', size='40', name='NLNAME')
+        p
+          label(for='NELECADR')
+            | E-mail address:
+            span.ibm-required *
+          span
+            input#NELECADR(required='', type='text', style='width:300px;', value='', size='40', name='NELECADR')
+        p
+          label(for='NCOMPANY')
+            | Company name:
+            span.ibm-required *
+          span
+            input#NCOMPANY( type='text', style='width:300px;', value='', size='40', name='NCOMPANY')
+        //
+          <p><label for="IDEASUPPORT">Content needed for the application:<span class="ibm-required">*</span><a title="Is the information to fuel your idea readily available, what is the source, and do you have access to it? What is the form of the content (e.g. structured/unstructured, books, webpages, etc)?" alt=""></a></label>
+          <span><textarea id="IDEASUPPORT" cols="37.5" rows="5" name="IDEASUPPORT" maxlength="800"></textarea></span></p>
+        p
+          label(for='HOW_CAN_BLOCKCHAIN_HELP')
+            | How can the blockchain team help you?
+            span.ibm-required *
+          span(required='')
+            textarea#HOW_CAN_BLOCKCHAIN_HELP(rows='4', cols='38', style='width:292px;', name='HOW_CAN_BLOCKCHAIN_HELP') 								
+        p
+          label  
+          | I accept IBM's 
+          a(href='//www.ibm.com/privacy/us/en/', target='_new') Privacy statement
+          |  and 
+          a(href='//www.ibm.com/legal/us/en/?lnk=flg-tous-usen', target='_new') Terms of use
+          | .
+        p.ibm-btn-row
+          label   
+          input.ibm-btn-pri.ibm-btn-blue-50(name='ibm-submit', type='submit', value='Submit')
+          input.ibm-btn-sec.ibm-btn-blue-50(type='button', name='ibm-cancel', value='Cancel', onclick="window.location.href='index.html'")

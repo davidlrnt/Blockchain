@@ -28,8 +28,8 @@ module.exports = {
         pageID:'http://www.ibm.com/cloud-computing/bluemix/application-services/',
         siteID:'BLUEMIX'
       },
-      stylesheet:[],
-      javascript:["/javascripts/main-v2.js"],
+      stylesheet:["http://1.www.s81c.com/common/v18/css/forms.css"],
+      javascript:["/javascripts/main-v2.js","//1.www.s81c.com/common/v18/js/forms.js","/javascripts/validateForm.js"],
       breadcrumbs:[
         {
           label:'Products',
@@ -681,6 +681,7 @@ module.exports = {
           text:"IBM offers secure and scalable technology platforms, deep industry expertise, and a proven engagement model to help clients build successful blockchain solutions. IBM is also a premier member of Linux Foundation’s Hyperledger Project, a cross-enterprise collaborative effort to create a blockchain for business.",
         }
       },
+      {temp:"contactForm"}
     ]// end modules
 
   }// end Main content
