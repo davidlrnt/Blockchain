@@ -29,7 +29,7 @@ module.exports = {
         siteID:'BLUEMIX'
       },
       stylesheet:["http://1.www.s81c.com/common/v18/css/forms.css"],
-      javascript:["/javascripts/main-v2.js","//1.www.s81c.com/common/v18/js/forms.js","/javascripts/validateForm.js"],
+      javascript:["/javascripts/main-v2.js","//1.www.s81c.com/common/v18/js/forms.js","https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js","/javascripts/validateForm.js"],
       breadcrumbs:[
         {
           label:'Products',
