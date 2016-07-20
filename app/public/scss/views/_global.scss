@@ -145,18 +145,20 @@ body.ibm-blockchain{
 }
 
 
-.bluemix-table thead tr {
-   background: #C0E6FF ;
-   color: #5596E6 ;
+.bluemix-table thead tr{
+  background: #68e2d0;
+  font-family: "HelveticaNeue-Bold", "HelvBoldIBM", Arial, sans-serif;
 }
 .bluemix-table tbody tr:nth-child(even) {
-   background: #F3F6FC ;
+   background: #D6FFEE;
 }
-.bluemix-table thead th, .bluemix-table tbody td, .bluemix-table tbody th {
-    padding: 15px 0;
+.bluemix-table tbody tr:last-child {
+  background: #68e2d0;
+}
+.bluemix-table thead th, .bluemix-table thead tr td, .bluemix-table tbody td, .bluemix-table tbody th {
+  padding: 15px;
 }
 .bluemix-table tbody th {
-  font-family: "HelveticaNeue-Bold", "HelvBoldIBM", Arial, sans-serif;
      font-weight: normal;
 }
 .bluemix-table td{
