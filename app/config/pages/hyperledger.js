@@ -219,7 +219,7 @@ module.exports = {
                 },
                 cta:{
                   parentClass:"ibm-ind-link ",
-                  class:" ibm-forward-link ibm-video-placeholder",
+                  class:" ibm-forward-link ",
                   text:"Learn more",
                   url:"https://youtu.be/4RRD4Jy6aWw",
                   target:"",
@@ -233,7 +233,7 @@ module.exports = {
                 },
                 cta:{
                   parentClass:"ibm-ind-link ",
-                  class:" ibm-external-link",
+                  class:" ibm-forward-link ",
                   text:"See the code",
                   url:"https://www-03.ibm.com/press/us/en/pressrelease/49632.wss",
                   target:"_blank",
@@ -247,7 +247,7 @@ module.exports = {
                 },
                 cta:{
                   parentClass:"ibm-ind-link ",
-                  class:" ibm-external-link",
+                  class:" ibm-forward-link ",
                   text:"Learn more",
                   url:"https://www-03.ibm.com/press/us/en/pressrelease/49088.wss",
                   target:"_blank",
@@ -261,7 +261,7 @@ module.exports = {
                 },
                 cta:{
                   parentClass:"ibm-ind-link ",
-                  class:" ibm-external-link",
+                  class:" ibm-forward-link ",
                   text:"Contribute now",
                   url:"https://www-03.ibm.com/press/us/en/pressrelease/49029.wss",
                   target:"_blank",
