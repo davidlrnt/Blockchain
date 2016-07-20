@@ -805,7 +805,7 @@ mixin featureGridHome
             | The basics of <br> blockchain
           p.ibm-textcolor-black-core 
             | Reimagine your most<br>fundamental transactions
-    section.co_wrapper_tile.ibm-widget-processed(data-widget='setsameheight', data-items='p.tile-copy')
+    section.co_wrapper_tile(data-widget='setsameheight', data-items='p.tile-copy')
       .tile-sm.anchor-el.co_tile_2.ibm-background-green-40.bg-image-cover(data-ga-outbound="true" data-href='https://www-935.ibm.com/services/us/gbs/thoughtleadership/blockchain/?1' style='background-image:url(/images/blockchain/home-tile-sm1.jpg)')
         p.ibm-textcolor-white-core.ibm-hidden-small.tile-cat.tile-content.ibm-small.ibm-light
           span.ibm-hidden-small EXECUTIVE REPORT
@@ -1002,12 +1002,12 @@ mixin gettingStartedChainCode
         .ibm-col-5-2.ibm-center-block.ibm-padding-top-r1
           img.ibm-resize(src="/images/blockchain/home-developers-card-bg.jpg")
       .ibm-col-6-3.ibm-padding-top-2
-        img.ibm-resize(src='/images/blockchain/Bluemix-logo.png', style='width:40px;height:40px;', alt='Bluemix logo')
-        h3.ibm-h3
-          strong The bascis of chaincode
-        p. Chaincode is a core component of the Hyperledger fabric. Learn how to use it and deploy an instance to your network to make transactions.
+        p.ibm-bold EXECUTIVE REPORT
+        h3.ibm-h3.ibm-padding-top-1
+          strong Transform the enterprise
+        p. Learn how to rethink enterprises, ecosystems and economies with blockchain
         p.ibm-button-link.ibm-padding-top-1
-          a.ibm-btn-sec.ibm-btn-white(href='##__ReplaceWithOfferPage__##', target='_blank') CTA
+          a.ibm-btn-sec.ibm-btn-white(href='##__ReplaceWithOfferPage__##', target='_blank') Read now
 
 
 mixin gettingStartedDevelopers
@@ -1031,6 +1031,89 @@ mixin gettingStartedDevelopers
                 | Docker images deployed to IBM
                 br
                 | Cloud and z System mainframes
+
+
+mixin gridGettingStartedBlockchain
+  .getting-started-grid(data-widget='setsameheight', data-items='.ibm-card')
+    .ibm-fluid
+      .ibm-col-12-4.ibm-padding-top-2(style='background-color: #f7f7f7;')
+        .ibm-card.ibm-card--noborder(style='background-color: #f7f7f7;')
+          .ibm-card__content.ibm-padding-bottom-1
+            h3.ibm-h3 Get started building Blockchain
+            p.ibm-h4 4 ways IBM helps your business get started with blockchain
+      .ibm-col-12-4.ibm-background-white-core.ibm-padding-top-2
+        .ibm-card.ibm-card--noborder
+          .ibm-mo.ibm-mo--top
+            .ibm-mo__image
+              img.ibm-resize(src='/images/bullet-check.svg', style='width:30px;', alt='DeveloperWorks')
+            .ibm-mo__body
+              h3.ibm-h3
+                strong DeveloperWorks
+          .ibm-card__content.ibm-padding-bottom-1
+            p.ibm-h4 Get started building with IBM Blockchain:
+            ul(style='')
+              li Tap into a community of other developers
+              li Learn how to build a block network
+              li Access a deep repository of tutorials and sample code
+          .ibm-card__bottom
+            p.ibm-button-link.ibm-padding-top-2(style='')
+              a.ibm-btn-sec(href='##__ReplaceMe__##', onclick='##__ReplaceMe__##', target='_blank') Explore DeveloperWorks
+      .ibm-col-12-4.ibm-background-white-core.ibm-padding-top-2
+        .ibm-card.ibm-card--noborder
+          .ibm-mo.ibm-mo--top
+            .ibm-mo__image
+              img.ibm-resize(src='/images/bullet-check.svg', style='width:30px;', alt='Bluemix garages')
+            .ibm-mo__body
+              h3.ibm-h3
+                strong IBM Bluemix Garage for Blockchain
+          .ibm-card__content.ibm-padding-bottom-1
+            p.ibm-h4
+              | Connect with the IBM experts for help deploying Blockchain no matter where you are in the world.
+            ul(style='')
+              li Industry expertise
+              li Design thinking
+              li Agile development
+          .ibm-card__bottom
+            p.ibm-button-link.ibm-padding-top-2(style='')
+              a.ibm-btn-sec(href='##__ReplaceMe__##', onclick='##__ReplaceMe__##', target='_blank') Contact an expert
+    .ibm-fluid
+      .ibm-col-12-4.ibm-padding-top-2(style='background-color: #f7f7f7;')
+        .ibm-card.ibm-card--noborder(style='background-color: #f7f7f7;')
+      .ibm-col-12-4.ibm-background-white-core.ibm-padding-top-2
+        .ibm-card.ibm-card--noborder
+          .ibm-mo.ibm-mo--top
+            .ibm-mo__image
+              img.ibm-resize(src='/images/bullet-check.svg', style='width:30px;', alt='IBM Blockchain and z Systems')
+            .ibm-mo__body
+              h3.ibm-h3
+                strong Build your first blockchain application
+          .ibm-card__content.ibm-padding-bottom-1
+            p.ibm-h4
+              | IBM offers a variety of technical and consulting services to help your product from idea to execution.
+          .ibm-card__bottom
+            p.ibm-button-link.ibm-padding-top-2(style='')
+              a.ibm-btn-sec(href='##__ReplaceMe__##', onclick='##__ReplaceMe__##', target='_blank') Learn more
+      .ibm-col-12-4.ibm-background-white-core.ibm-padding-top-2
+        .ibm-card.ibm-card--noborder
+          .ibm-mo.ibm-mo--top
+            .ibm-mo__image
+              img.ibm-resize(src='/images/bullet-check.svg', style='width:30px;', alt='IBM Blockchain and z Systems')
+            .ibm-mo__body
+              h3.ibm-h3
+                strong IBM Blockchain and z Systems
+          .ibm-card__content.ibm-padding-bottom-1
+            p.ibm-h4
+              | Capitalize on your investment in z Systems by tapping the following built-in features of Blockchain:
+            ul(style='')
+              li Cryptography
+              li Security
+              li Reliability
+          .ibm-card__bottom
+            p.ibm-button-link.ibm-padding-top-2(style='')
+              a.ibm-btn-sec(href='##__ReplaceMe__##', onclick='##__ReplaceMe__##', target='_blank') Learn more
+
+
+
 
 mixin contactForm
   .ibm-columns

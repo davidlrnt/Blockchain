@@ -28,8 +28,8 @@ module.exports = {
         pageID:'http://www.ibm.com/blockchain',
         siteID:'BLOCKCHAIN'
       },
-      stylesheet:["/stylesheets/animate.css"],
-      javascript:["/javascripts/main-v2.js","/javascripts/wow.min.js"
+      stylesheet:[""],
+      javascript:["/javascripts/main-v2.js"
       ],
       breadcrumbsEnabled: false,
       breadcrumbsClass:"ibm-textcolor-white-core",

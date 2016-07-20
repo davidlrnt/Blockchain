@@ -220,9 +220,9 @@ module.exports = {
                     parentClass:"ibm-button-link ibm-padding-top-1",
                     class:" ibm-btn-sec ibm-video-placeholder",
                     text:"Find out more about the Hyperledger project",
-                    url:"https://www.hyperledger.org",
+                    url:"/blockchain/hyperledger",
                     target:"",
-                    onClick:"trackOutboundLink('https://www.hyperledger.org'); return false;",
+                    onClick:"",
                   }
               },
               {

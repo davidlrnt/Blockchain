@@ -1,5 +1,5 @@
 module.exports = [
-  {label: "Blockchain Basics", href: "/blockchain/basics",
+  {label: "Blockchain Basics", href: "/blockchain/what-is-blockchain",
       // secondary_tabs: [
       //   {label: "Page One", href: "/blockchain/testpage.html"},
       //   {label: "Page Two", href: "/blockchain/testpage.html"},
@@ -10,7 +10,7 @@ module.exports = [
   {label: "Blockchain for Business", href: "/blockchain/for-business",
   },
   { label: "Get started with IBM",
-    href: "https://developer.ibm.com/open/ibm-open-blockchain/", 
+    href: "https://developer.ibm.com/open/ibm-open-blockchain/",
     onClick:"trackOutboundLink('https://developer.ibm.com/open/ibm-open-blockchain/'); return false;"
   },
   // {
