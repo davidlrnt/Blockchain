@@ -64,7 +64,7 @@ module.exports = {
           },
           header: "Transforming your business networks with blockchain",
           subhead: "Transaction driven transformation",
-          paragraph: "IBM Blockchain empowers businesses to move assets through a highly-secure,<br>shared and replicated ledger.",
+          paragraph: "IBM Blockchain empowers businesses' to move assets through a highly-secured,<br>shared and replicated ledger.",
           primary_cta:{
               enabled: true,
               cta:{
@@ -182,7 +182,7 @@ module.exports = {
           //     content:{
           //       class:"ibm-band ibm-padding-top-2 ibm-background-blue-40 ibm-alternate-background",
           //       background:"background: #FFFFFF url(/images/blockchain/home-launching-section-bg.png) center center no-repeat; background-size:cover;",
-          //       headline:{class:"ibm-h2 ibm-light", text:"Launching IBM Blockchain"},
+          //       headline:{class:"ibm-h2 ibm-light", text:"Launch IBM Blockchain"},
           //       setsameheight:{
           //         class:".ibm-col-6-3",
           //       },
@@ -237,7 +237,7 @@ module.exports = {
           //   content:{
           //     class:"ibm-band ibm-padding-top-2 ibm-background-blue-40 ibm-alternate-background",
           //     background:"background: #FFFFFF url(/images/blockchain/home-launching-section-bg.png) center center no-repeat; background-size:cover;",
-          //     headline:{class:"ibm-h2 ibm-light", text:"Launching IBM Blockchain"},
+          //     headline:{class:"ibm-h2 ibm-light", text:"Launch IBM Blockchain"},
           //     setsameheight:{
           //       class:".ibm-col-6-3",
           //     },
@@ -277,7 +277,7 @@ module.exports = {
           //     }
           //   }
           // },
-          {temp:"launchingBlockchain"}
+          {temp:"launchBlockchain"}
         ]
     }
 } // index.html home page
