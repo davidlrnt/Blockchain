@@ -61,7 +61,7 @@ module.exports = {
                   img:""
               },
           },
-          header: "Build a blokchain application and put it to work for your business",
+          header: "Build a blockchain application and put it to work for your business",
           paragraph: "Evolve your transactions to become simpler and more secure, whether they are with someone next door or across an international border.",
           primary_cta:{
               enabled: false,
