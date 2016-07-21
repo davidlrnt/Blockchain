@@ -62,8 +62,8 @@ module.exports = {
               },
           },
           header: "Reimagine your most fundamental transactions",
-          subhead: "Blockchain is a new technology that some are welcoming as an opportunity to innovate and refine while others are viewing it as a potential disruption. IBM’s point of view is that Blockchain is an important technology for transactions enabling global business to move with less friction.",
-          paragraph: "Blockchain is a new technology that some are welcoming as an opportunity to innovate and refine while others are viewing it as a potential disruption. IBM’s point of view is that Blockchain is an important technology for transactions enabling global business to move with less friction.",
+          subhead: "Blockchain is a new technology that some are welcoming as an opportunity to innovate and refine while others are viewing it as a potential disruption. IBM’s point of view is that IBM Blockchain is an important technology for transactions enabling global business to move with less friction.",
+          paragraph: "Blockchain is a new technology that some are welcoming as an opportunity to innovate and refine while others are viewing it as a potential disruption. IBM’s point of view is that IBM Blockchain is an important technology for transactions enabling global business to move with less friction.",
           primary_cta:{
               enabled: false,
               cta:{
@@ -251,10 +251,10 @@ module.exports = {
               {
                 pullQuote:{
                   class:"ibm-h2 ibm-textcolor-white-core",
-                  text: "As with any early-stage, highly-complex technology that demonstrates the ability to change the way we live our lives and conduct business, blockchain demands a cross-industry, open source collaboration to advance the technology for all.",
+                  text: "Over the past two decades, the Internet has revolutionized many aspects of business and society–making individuals and organizations more productive. Yet the basic mechanics of how people and organizations execute transactions with one another have not been updated for the 21st century. Blockchain could bring to those processes the openness and efficiency we have come to expect in the Internet Era.",
                   source:{
                     class:" ibm-textcolor-white-core",
-                    text: "&mdash; Jim Zemlin, Executive Director, Linux Foundation"
+                    text: "&mdash; Arvind Krishna, Senior Vice President, IBM Research"
                   }
                 }
               }
@@ -307,7 +307,7 @@ module.exports = {
           }
         }
       },
-      {temp:"launchingBlockchain"}
+      {temp:"launchBlockchain"}
 
     ]
     }

@@ -273,7 +273,7 @@ module.exports = {
           }
         }
       },
-      {temp:"launchingBlockchain"}
+      {temp:"launchBlockchain"}
     ]
   }
 }
