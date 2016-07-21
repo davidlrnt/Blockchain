@@ -342,7 +342,7 @@ div[class*=co_tile_1],div[class*=co-tile-1] {
 }
 .featured-tiles .featured-content .tile-content-bottom a.ibm-external-link:after {
     content: "\f131"!important;
-    right: 18px!important;
+    //right: 18px!important;
 }
 .featured-tiles .featured-content .tile-content-bottom a.ibm-forward-link:after {
     content: "\f13a"!important;
@@ -433,6 +433,12 @@ div[class*=co_tile_1],div[class*=co-tile-1] {
 }
 .getting-started-resources-section{
   padding-top: 0;
+  .ibm-columns{
+    padding-bottom:0;
+  }
+  .ibm-columns > :first-child{
+    border:0;
+  }
   .ibm-col-6-2{
     box-sizing: border-box;
     border-left: solid 1px #cccccc;
@@ -440,9 +446,10 @@ div[class*=co_tile_1],div[class*=co-tile-1] {
       border: 0;
     }
   }
-  .ibm-columns > :first-child{
-    border:0;
+  .ibm-mo{
+    padding-left: 20px;
   }
+
 }
 .getting-started-grid{
   .ibm-fluid{

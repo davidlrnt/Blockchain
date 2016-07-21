@@ -88,132 +88,122 @@ module.exports = {
       modules:[
         {temp: "gettingStartedChainCode"},
         {temp: "gettingStartedDevelopers"},
-        // {
-        //   temp:"products",
-        //   content:{
-        //     class:"getting-started-resources-section ibm-band ibm-padding-top-2",
-        //     background:"border-bottom:solid 1px #cccccc;",
-        //     headline:{
-        //       class:"ibm-h2 ibm-textcolor-gray-50",
-        //       text:"IBM Blockchain resources"},
-        //     }
-        //   },
-          // {
-          //   temp:"products",
-          //   content:{
-          //     class:"getting-started-resources-section ibm-band",
-          //     background:"",
-          //     cards:{
-          //       class:"ibm-col-6-2 ibm-padding-top-2",
-          //       style:"background-color:transparent;",
-          //       card:[
-          //         {
-          //           class:" ",
-          //           mediaObject:{
-          //                  image:{
-          //                    src:"/images/bullet-check.svg",
-          //                    alt:"DeveloperWorks",
-          //                    style:"width:50px;"
-          //                  },
-          //                  subhead:"<strong>DeveloperWorks</strong>",
-          //                },
-          //           text:{class:"ibm-h4",text:"Get started building with IBM Blockchain:"},
-          //           list:{
-          //             style:"",
-          //             items:[
-          //             {
-          //               text: "Tap into a community of other developers",
-          //             },
-          //             {
-          //               text: "Learn how to build a block network",
-          //             },
-          //             {
-          //               text: "Access a deep repository of tutorials and sample code",
-          //             },
-          //
-          //           ]},
-          //           cta:{
-          //             parentClass:"ibm-button-link ibm-padding-top-2",
-          //             class:" ibm-btn-sec",
-          //             text:"Explore DeveloperWorks",
-          //             url:"##__ReplaceMe__##",
-          //             target:"_blank",
-          //             onClick:"##__ReplaceMe__##"
-          //           }
-          //         },
-          //         {
-          //           mediaObject:{
-          //                  image:{
-          //                    src:"/images/bullet-check.svg",
-          //                    alt:"Bluemix garages",
-          //                    style:"width:50px;"
-          //                  },
-          //                  subhead:"<strong>Bluemix garages for Blockchain</strong>",
-          //           },
-          //           text:{class:"ibm-h4 ",text:"Connect with the IBM experts for help deploying Blockchain no matter where you are in the world."},
-          //           list:{
-          //             style:"",
-          //             items:[
-          //             {
-          //               text: "Industry expertise",
-          //             },
-          //             {
-          //               text: "Design thinking",
-          //             },
-          //             {
-          //               text: "Agile development",
-          //             },
-          //
-          //           ]},
-          //           cta:{
-          //             parentClass:"ibm-button-link ibm-padding-top-2",
-          //             class:" ibm-btn-sec",
-          //             text:"Contact an expert",
-          //             url:"##__ReplaceMe__##",
-          //             target:"_blank",
-          //             onClick:"##__ReplaceMe__##"
-          //           }
-          //         },
-          //         {
-          //           mediaObject:{
-          //                  image:{
-          //                    src:"/images/bullet-check.svg",
-          //                    alt:"IBM Blockchain and z Systems",
-          //                    style:"width:50px;"
-          //                  },
-          //                  subhead:"<strong>IBM Blockchain and z Systems</strong>",
-          //           },
-          //           text:{class:"ibm-h4 ",text:"Capitalize on your investment in z Systems by tapping the following built-in features of Blockchain:"},
-          //           list:{
-          //             style:"",
-          //             items:[
-          //             {
-          //               text: "Cryptography",
-          //             },
-          //             {
-          //               text: "Security",
-          //             },
-          //             {
-          //               text: "Reliability",
-          //             },
-          //
-          //           ]},
-          //           cta:{
-          //             parentClass:"ibm-button-link ibm-padding-top-2",
-          //             class:" ibm-btn-sec",
-          //             text:"Learn more",
-          //             url:"##__ReplaceMe__##",
-          //             target:"_blank",
-          //             onClick:"##__ReplaceMe__##"
-          //           }
-          //         },
-          //
-          //       ]
-          //
-          //     }
-          //   }
-          // },
-          {temp: "gridGettingStartedBlockchain"},
+        {
+          temp:"products",
+          content:{
+            class:"getting-started-resources-section ibm-band ibm-padding-top-2 ibm-alternate-background ibm-background-green-40",
+            headline:{
+              class:"ibm-h2",
+              text:"Get started with Blockchain",
+            },
+            text:{
+              text:"3 ways IBM helps your business get started with blockchain"
+            }
+          }
+        },
+          {
+            temp:"products",
+            content:{
+              class:"getting-started-resources-section ibm-band ibm-background-white-core",
+              background:"padding-bottom:0;border-bottom:solid 1px #cccccc;",
+              cards:{
+                class:"ibm-col-6-2 ibm-padding-top-2",
+                style:"background-color:transparent;",
+                card:[
+                  {
+                    class:" ",
+                    mediaObject:{
+                           image:{
+                             src:"/images/bullet-check.svg",
+                             alt:"First Blockchain app",
+                             style:"width:30px;"
+                           },
+                           subhead:"<strong>Builid your first blockchain application</strong>",
+                         },
+                    text:{class:"ibm-h4",text:"IBM offers a variety of technical and consulting services to help take your product from idea to execution."},
+                    cta:{
+                      parentClass:"ibm-button-link ibm-padding-top-2",
+                      class:" ibm-btn-sec",
+                      text:"Get started on Bluemix",
+                      url:"##__ReplaceMe__##",
+                      target:"_blank",
+                      onClick:"##__ReplaceMe__##"
+                    }
+                  },
+                  {
+                    class:" ",
+                    mediaObject:{
+                           image:{
+                             src:"/images/bullet-check.svg",
+                             alt:"DeveloperWorks",
+                             style:"width:30px;"
+                           },
+                           subhead:"<strong>DeveloperWorks</strong>",
+                         },
+                    text:{class:"ibm-h4",text:"Get started building with IBM Blockchain:"},
+                    list:{
+                      style:"",
+                      items:[
+                      {
+                        text: "Tap into a community of other developers",
+                      },
+                      {
+                        text: "Learn how to build a block network",
+                      },
+                      {
+                        text: "Access a deep repository of tutorials and sample code",
+                      },
+
+                    ]},
+                    cta:{
+                      parentClass:"ibm-button-link ibm-padding-top-2",
+                      class:" ibm-btn-sec",
+                      text:"Explore DeveloperWorks",
+                      url:"##__ReplaceMe__##",
+                      target:"_blank",
+                      onClick:"##__ReplaceMe__##"
+                    }
+                  },
+                  {
+                    mediaObject:{
+                           image:{
+                             src:"/images/bullet-check.svg",
+                             alt:"IBM Blockchain and z Systems",
+                             style:"width:30px;"
+                           },
+                           subhead:"<strong>IBM Blockchain and z Systems</strong>",
+                    },
+                    text:{class:"ibm-h4 ",text:"Leverage your existing infrastructure with LinuxONE and Z Systems:"},
+                    list:{
+                      style:"",
+                      items:[
+                      {
+                        text: "Cryptography",
+                      },
+                      {
+                        text: "Security",
+                      },
+                      {
+                        text: "Reliability",
+                      },
+
+                    ]},
+                    cta:{
+                      parentClass:"ibm-button-link ibm-padding-top-2",
+                      class:" ibm-btn-sec",
+                      text:"Learn more",
+                      url:"##__ReplaceMe__##",
+                      target:"_blank",
+                      onClick:"##__ReplaceMe__##"
+                    }
+                  },
+
+                ]
+
+              }
+            }
+          },
+          //{temp: "gridGettingStartedBlockchain"},
           {
 
               temp:"products",
@@ -239,15 +229,27 @@ module.exports = {
                       },
                       subhead:"Commercial paper app on Blockchain",
                       text:"See how a commercial paper trading network can be implemented with a blockchain network.",
-                      cta:{
-                        parentClass:"ibm-ind-link ibm-padding-top-2",
-                        class:" ibm-forward-link",
-                        text:"Get the code",
-                        url:"#",
-                        target:"_blank",
-                        onClick:""
-                      }
-                    },
+                      ctagroup:{
+                        class:"ibm-ind-link ",
+                        cta:[
+                          {
+                            parentClass:"ibm-ind-link ibm-padding-top-2",
+                            class:" ibm-forward-link",
+                            text:"Get the code",
+                            url:"#",
+                            target:"_blank",
+                            onClick:""
+                          },
+                          {
+                            parentClass:"ibm-ind-link ibm-padding-top-2",
+                            class:" ibm-forward-link",
+                            text:"Deploy to Bluemix",
+                            url:"#",
+                            target:"_blank",
+                            onClick:""
+                          },
+                        ]
+                      }                    },
                     {
                       video:{
                         title:"IBM Joins Linux Foundation to Advance Blockchain Hyperledger",
