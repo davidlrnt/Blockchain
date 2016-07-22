@@ -120,7 +120,7 @@ module.exports = {
         temp:"feature2col",
         content:{
           class:"ibm-band ibm-padding-top-2 ibm-textcolor-white-core",
-          background:"background: #FFFFFF url(/images/blockchain/hyperledger-video-container.jpg) center center no-repeat; background-size:cover;",
+          background:"background: #FFFFFF url(/images/blockchain/hyperledger-video-container.png) center center no-repeat; background-size:cover;",
           headline:"",
           text:"",
           cards:[
@@ -202,10 +202,10 @@ module.exports = {
       {
         temp:"products",
         content:{
-          class:"home-whats-new-section ibm-band ibm-padding-top-2",
+          class:"home-whats-new-section ibm-band ibm-padding-top-2 ",
           background:"",
           headline:{
-            class:"ibm-h2 ibm-textcolor-gray-50",
+            class:"ibm-h2",
             text:"Additional Resources"},
           cards:{
             class:"ibm-col-4-1",
@@ -214,7 +214,7 @@ module.exports = {
               {
                 class:"home-whats-new-first ",
                 subhead:{
-                  class:" ibm-light ibm-textcolor-gray-50 ",
+                  class:"ibm-bold ",
                   text:"Access Hyperledger Fabric protocol specs on GitHub"
                 },
                 cta:{
@@ -228,7 +228,7 @@ module.exports = {
               },
               {
                 subhead:{
-                  class:" ibm-light ibm-textcolor-gray-50",
+                  class:"ibm-bold",
                   text:"Explore the Hyperledger Project on Github"
                 },
                 cta:{
@@ -242,7 +242,7 @@ module.exports = {
               },
               {
                 subhead:{
-                  class:" ibm-light ibm-textcolor-gray-50",
+                  class:"ibm-bold",
                   text:"View Hyperledger Fabric Documentation"
                 },
                 cta:{
@@ -256,7 +256,7 @@ module.exports = {
               },
               {
                 subhead:{
-                  class:" ibm-light ibm-textcolor-gray-50",
+                  class:"ibm-bold",
                   text:"Join the Hyperledger Project community on Slack"
                 },
                 cta:{
