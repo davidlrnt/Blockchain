@@ -107,7 +107,7 @@ module.exports = {
               class:"getting-started-resources-section ibm-band ibm-background-white-core",
               background:"padding-bottom:0;border-bottom:solid 1px #cccccc;",
               cards:{
-                class:"ibm-col-6-2 ibm-padding-top-2",
+                class:"ibm-col-6-2  ibm-col-large-6-3 ibm-col-medium-1-1 ibm-padding-top-2",
                 style:"background-color:transparent;",
                 card:[
                   {
@@ -138,7 +138,7 @@ module.exports = {
                              alt:"DeveloperWorks",
                              style:"width:30px;"
                            },
-                           subhead:"<strong>DeveloperWorks</strong>",
+                           subhead:"<strong>developerWorks</strong>",
                          },
                     text:{class:"ibm-h4",text:"Get started building with IBM Blockchain:"},
                     list:{
@@ -158,7 +158,7 @@ module.exports = {
                     cta:{
                       parentClass:"ibm-button-link ibm-padding-top-2",
                       class:" ibm-btn-sec",
-                      text:"Explore DeveloperWorks",
+                      text:"Explore developerWorks",
                       url:"##__ReplaceMe__##",
                       target:"_blank",
                       onClick:"##__ReplaceMe__##"
@@ -211,7 +211,7 @@ module.exports = {
                 class:"ibm-band ibm-padding-top-2 ibm-background-white-core",
                 background:"",
                 headline:{
-                  class:"ibm-h2 ibm-textcolor-gray-50",
+                  class:"ibm-h2 ",
                   text:"Explore IBM Blockchain instances"
                 },
                 cards:{
@@ -221,11 +221,10 @@ module.exports = {
                       video:{
                         title:"IBM Joins Linux Foundation to Advance Blockchain Hyperledger",
                         display:"inline",
-                        url:"https://www.youtube.com/watch?v=4RRD4Jy6aWw",
-                        id:"4RRD4Jy6aWw",
+                        url:"https://www.youtube.com/watch?v=B2eYh2Y7rJw",
+                        id:"B2eYh2Y7rJw",
                         type:"youtube",
                         img:"/images/blockchain/fpo.svg",
-                        timeStamp:"1.36"
                       },
                       subhead:"Commercial paper app on Blockchain",
                       text:"See how a commercial paper trading network can be implemented with a blockchain network.",
@@ -234,52 +233,52 @@ module.exports = {
                         cta:[
                           {
                             parentClass:"ibm-ind-link ibm-padding-top-2",
-                            class:" ibm-forward-link",
+                            class:" ibm-external-link",
                             text:"Get the code",
-                            url:"#",
+                            url:"https://github.com/IBM-Blockchain/cp-web#readme",
                             target:"_blank",
-                            onClick:""
+                            onClick:"trackOutboundLink('https://github.com/IBM-Blockchain/cp-web#readme'); return false;"
                           },
                           {
                             parentClass:"ibm-ind-link ibm-padding-top-2",
-                            class:" ibm-forward-link",
+                            class:" ibm-external-link",
                             text:"Deploy to Bluemix",
-                            url:"#",
+                            url:"https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/cp-web.git",
                             target:"_blank",
-                            onClick:""
+                            onClick:"trackOutboundLink('https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/cp-web.git'); return false;"
                           },
                         ]
-                      }                    },
+                      }
+                    },
                     {
                       video:{
                         title:"IBM Joins Linux Foundation to Advance Blockchain Hyperledger",
                         display:"inline",
-                        url:"https://www.youtube.com/watch?v=4RRD4Jy6aWw",
-                        id:"4RRD4Jy6aWw",
+                        url:"https://youtu.be/IgNfoQQ5Reg",
+                        id:"IgNfoQQ5Reg",
                         type:"youtube",
                         img:"/images/blockchain/fpo.svg",
-                        timeStamp:"1.36"
                       },
-                      subhead:"Car lease DEMO",
+                      subhead:"Car lease demo",
                       text:"Watch a sample supply chain process between multiple parties using IBM Blockchain",
                       ctagroup:{
                         class:"ibm-ind-link ",
                         cta:[
                           {
                             parentClass:"ibm-ind-link ibm-padding-top-2",
-                            class:" ibm-forward-link",
+                            class:" ibm-external-link",
                             text:"Get the code",
-                            url:"#",
+                            url:"https://github.com/IBM-Blockchain/car-lease-demo",
                             target:"_blank",
-                            onClick:""
+                            onClick:"trackOutboundLink('https://github.com/IBM-Blockchain/car-lease-demo'); return false;"
                           },
                           {
                             parentClass:"ibm-ind-link ibm-padding-top-2",
-                            class:" ibm-forward-link",
+                            class:" ibm-external-link",
                             text:"Deploy to Bluemix",
-                            url:"#",
+                            url:"https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo.git",
                             target:"_blank",
-                            onClick:""
+                            onClick:"trackOutboundLink('https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo.git'); return false;"
                           },
                         ]
                       }
@@ -289,26 +288,26 @@ module.exports = {
                         src:"/images/blockchain/fpo.svg",
                         alt:"image alt text"
                       },
-                      subhead:"Marbles app",
+                      subhead:"Marbles sample application",
                       text:"Explore how your business can make a simple asset transcation with a blockchain network.",
                       ctagroup:{
                         class:"ibm-ind-link ",
                         cta:[
                           {
                             parentClass:"ibm-ind-link ibm-padding-top-2",
-                            class:" ibm-forward-link",
+                            class:" ibm-external-link",
                             text:"Get the code",
-                            url:"#",
+                            url:"https://github.com/IBM-Blockchain/marbles",
                             target:"_blank",
-                            onClick:""
+                            onClick:"trackOutboundLink('https://github.com/IBM-Blockchain/marbles'); return false;"
                           },
                           {
                             parentClass:"ibm-ind-link ibm-padding-top-2",
-                            class:" ibm-forward-link",
+                            class:" ibm-external-link",
                             text:"Deploy to Bluemix",
-                            url:"#",
+                            url:"https://bluemix.net/deploy?repository=https://github.com/ibm-blockchain/marbles.git",
                             target:"_blank",
-                            onClick:""
+                            onClick:"trackOutboundLink('https://bluemix.net/deploy?repository=https://github.com/ibm-blockchain/marbles.git'); return false;"
                           },
                         ]
                       }

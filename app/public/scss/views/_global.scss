@@ -90,11 +90,6 @@ body.ibm-blockchain{
       border: 0!important;
     }
   }
-  .getting-started-resources-section{
-    .ibm-col-6-2{
-      border: 0!important;
-    }
-  }
 }
 
 .leadspace-social{
@@ -431,6 +426,31 @@ div[class*=co_tile_1],div[class*=co-tile-1] {
     border:0;
   }
 }
+
+@media (max-width: 579px) {
+  .getting-started-resources-section{
+    .ibm-col-6-2{
+      border: 0!important;
+      .ibm-card{
+        height:auto!important;
+      }
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .getting-started-resources-section{
+    .ibm-col-6-2{
+      border: 0!important;
+    }
+  }
+}
+@media (max-width: 1239px) and (min-width: 1000px){
+  .getting-started-resources-section{
+    .ibm-columns > :last-child{
+      border:0;
+    }
+  }
+}
 .getting-started-resources-section{
   padding-top: 0;
   .ibm-columns{
@@ -449,7 +469,6 @@ div[class*=co_tile_1],div[class*=co-tile-1] {
   .ibm-mo{
     padding-left: 20px;
   }
-
 }
 .getting-started-grid{
   .ibm-fluid{
