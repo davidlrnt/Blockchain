@@ -169,8 +169,8 @@ module.exports = {
                   src:"/images/blockchain/hyperledger-network-logo.png",
                   alt:"Code"
                 },
-                subhead:{class:"ibm-h3 ibm-textcolor-gray-50", text:"Permissioned network"},
-                text:{class:"ibm-textcolor-gray-50", text:"Allow access to only those you give permission to."},
+                subhead:{class:"ibm-h3 ", text:"Permissioned network"},
+                text:{class:"", text:"Allow access to only those you give permission to."},
               },
               {
                 class:"ibm-center ibm-padding-top-2",
@@ -179,8 +179,8 @@ module.exports = {
                   src:"/images/blockchain/hyperledger-confidential-logo.png",
                   alt:"Cloud"
                 },
-                subhead:{class:"ibm-h3 ibm-textcolor-gray-50", text:"Confidential transactions"},
-                text:{class:"ibm-textcolor-gray-50", text:"Gives businesses the flexibility and security to make transactions that are only seen by parties with the correct encryption keys."},
+                subhead:{class:"ibm-h3 ", text:"Confidential transactions"},
+                text:{class:"", text:"Gives businesses the flexibility and security to make transactions that are only seen by parties with the correct encryption keys."},
               },
               {
                 class:"ibm-center  ibm-padding-top-2",
@@ -189,8 +189,8 @@ module.exports = {
                   src:"/images/blockchain/hyperledger-crypto-logo.png",
                   alt:"Client"
                 },
-                subhead:{class:"ibm-h3 ibm-textcolor-gray-50", text:"No cryptocurrency"},
-                text:{class:"ibm-textcolor-gray-50", text:"Requires less processing time that will slow down transactions."},
+                subhead:{class:"ibm-h3 ", text:"No cryptocurrency"},
+                text:{class:"", text:"Requires less processing time that will slow down transactions."},
               },
             ]
           }
