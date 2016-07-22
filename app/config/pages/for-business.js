@@ -60,8 +60,8 @@ module.exports = {
                   img:""
               },
           },
-          header: "What is IBM Blockchain for Enterprise",
-          subhead: "Lorem ipsum dolor sit amet, vestibulum dictumst, quam nam tortor elementum mauris conubia tortor, massa integer dui, libero pellentesque quis malesuada voluptatum. Metus vitae placerat elit, magna fusce, bibendum sed imperdiet pharetra aenean suspendisse, leo ridiculus, nunc dui rutrum ut tempus non.",
+          header: "Transform your<br>business with<br>blockchain",
+          subhead: "Blockchain gives your business the ability to move assets through a highly-secure, shared and replicated ledger. Transact with anyone, anywhere at anytime.",
           primary_cta:{
               enabled: false,
               cta:{
@@ -116,6 +116,52 @@ module.exports = {
 
             }
 
+          },
+          {
+            temp:"feature2col",
+            content:{
+              class:"ibm-band ibm-padding-top-2",
+              background:"background: #FFFFFF url(/images/blockchain/Whatis-hyperledger-bg.png) center center no-repeat; background-size:cover;",
+              headline:"",
+              text:"",
+              cards:[
+                { 
+                  // class:"ibm-col-6-3 ",
+                  text: "hello"
+                },
+                {
+                  class:"ibm-col-6-3 ",
+                  text: "test",
+                  subhead: {
+                    text: "another test"
+                  },
+                  background:"padding: 0 20px;box-sizing: border-box;",
+                  subhead:
+                    {
+                      class:"ibm-h2 ibm-bold ibm-fontsize-x25",
+                      text:"See what other are<br>doing with blockchain",
+                    },
+                    text:"Right now, blockchain is helping re-shape industries as varied as finance and insurance, to Government agencies and Internet of T hings networks. We predict the technology will continue to evolve and be used to create smart(er) and more efficient systems in sectors such a s:",
+                    cta:{
+                      parentClass:"ibm-button-link ibm-padding-top-1",
+                      class:" ibm-btn-sec ibm-video-placeholder",
+                      text:"See specific use cases",
+                      url:"/blockchain/hyperledger",
+                      target:"",
+                      onClick:"",
+                    }
+                },
+                {
+                  class:"ibm-col-6-3 ibm-padding-top-3",
+                  background:"padding: 0 20px;box-sizing: border-box;",
+                  image:{
+                    style:"",
+                    src:"/images/blockchain/Whatis-hyperledger.png",
+                    alt:"Hyperledger"
+                  },
+                }
+            ]
+           }
           },
           {
             temp: "featureGridForBusiness"
