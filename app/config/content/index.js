@@ -23,5 +23,8 @@ module.exports = {
       "blockchain/hyperledger":         require('../pages/hyperledger.js'),
       "blockchain/getting-started":     require('../pages/getting-started.js'),
 
+
+      "blockchain/contact-expert":     require('../pages/contact-expert.js'),
+
     } // END routes
 }
