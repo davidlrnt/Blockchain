@@ -37,7 +37,7 @@ module.exports = {
     url:'javascript: void(0);'
   }],
   leadspace:{
-    leadspaceimg:"/images/blockchain/IBM_Blockchain_BlockchainBasics_Hero.jpg",
+    leadspaceimg:"/images/blockchain/IBM_Blockchain_HyperledgerHero.jpg",
     social:{
       enabled: false
     },
@@ -119,8 +119,8 @@ module.exports = {
       {
         temp:"feature2col",
         content:{
-          class:"ibm-band ibm-padding-top-2",
-          background:"background: #FFFFFF url(/images/blockchain/Whatis-work-bg.png) center center no-repeat; background-size:cover;",
+          class:"ibm-band ibm-padding-top-2 ibm-textcolor-white-core",
+          background:"background: #FFFFFF url(/images/blockchain/hyperledger-video-container.jpg) center center no-repeat; background-size:cover;",
           headline:"",
           text:"",
           cards:[
@@ -166,7 +166,7 @@ module.exports = {
                 class:"ibm-center ibm-padding-top-2",
                 image:{
                   style:"width:100px;",
-                  src:"/images/blockchain/Whatis-c1-code.png",
+                  src:"/images/blockchain/hyperledger-network-logo.png",
                   alt:"Code"
                 },
                 subhead:{class:"ibm-h3 ibm-textcolor-gray-50", text:"Permissioned network"},
@@ -176,7 +176,7 @@ module.exports = {
                 class:"ibm-center ibm-padding-top-2",
                 image:{
                   style:"width:100px;",
-                  src:"/images/blockchain/Whatis-c2-cloud.png",
+                  src:"/images/blockchain/hyperledger-confidential-logo.png",
                   alt:"Cloud"
                 },
                 subhead:{class:"ibm-h3 ibm-textcolor-gray-50", text:"Confidential transactions"},
@@ -186,7 +186,7 @@ module.exports = {
                 class:"ibm-center  ibm-padding-top-2",
                 image:{
                   style:"width:100px;",
-                  src:"/images/blockchain/Whatis-c3-client.png",
+                  src:"/images/blockchain/hyperledger-crypto-logo.png",
                   alt:"Client"
                 },
                 subhead:{class:"ibm-h3 ibm-textcolor-gray-50", text:"No cryptocurrency"},
@@ -219,11 +219,11 @@ module.exports = {
                 },
                 cta:{
                   parentClass:"ibm-ind-link ",
-                  class:" ibm-forward-link ",
+                  class:"ibm-external-link",
                   text:"Learn more",
-                  url:"https://youtu.be/4RRD4Jy6aWw",
+                  url:"https://github.com/hyperledger/fabric/blob/master/docs/protocol-spec.md",
                   target:"",
-                  onClick:""
+                  onClick:"trackOutboundLink('https://github.com/hyperledger/fabric/blob/master/docs/protocol-spec.md'); return false;"
                 }
               },
               {
@@ -233,11 +233,11 @@ module.exports = {
                 },
                 cta:{
                   parentClass:"ibm-ind-link ",
-                  class:" ibm-forward-link ",
+                  class:"ibm-external-link",
                   text:"See the code",
-                  url:"https://www-03.ibm.com/press/us/en/pressrelease/49632.wss",
+                  url:"https://github.com/hyperledger",
                   target:"_blank",
-                  onClick:"trackOutboundLink('https://www-03.ibm.com/press/us/en/pressrelease/49632.wss'); return false;"
+                  onClick:"trackOutboundLink('https://github.com/hyperledger'); return false;"
                 }
               },
               {
@@ -247,11 +247,11 @@ module.exports = {
                 },
                 cta:{
                   parentClass:"ibm-ind-link ",
-                  class:" ibm-forward-link ",
+                  class:"ibm-external-link",
                   text:"Learn more",
-                  url:"https://www-03.ibm.com/press/us/en/pressrelease/49088.wss",
+                  url:"https://github.com/hyperledger",
                   target:"_blank",
-                  onClick:"trackOutboundLink('https://www-03.ibm.com/press/us/en/pressrelease/49088.wss'); return false;"
+                  onClick:"trackOutboundLink('https://github.com/hyperledger'); return false;"
                 }
               },
               {
@@ -261,11 +261,11 @@ module.exports = {
                 },
                 cta:{
                   parentClass:"ibm-ind-link ",
-                  class:" ibm-forward-link ",
+                  class:"ibm-external-link",
                   text:"Contribute now",
-                  url:"https://www-03.ibm.com/press/us/en/pressrelease/49029.wss",
+                  url:"https://hyperledger.slack.com/",
                   target:"_blank",
-                  onClick:"trackOutboundLink('https://www-03.ibm.com/press/us/en/pressrelease/49029.wss'); return false;"
+                  onClick:"trackOutboundLink('https://hyperledger.slack.com/'); return false;"
                 }
               },
             ]
