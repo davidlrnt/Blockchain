@@ -40,7 +40,7 @@ module.exports = {
               ],
       leadspace:{
         class:"ibm-alternate-background",
-          leadspaceimg:"",
+          leadspaceimg:"/images/blockchain/IBM_Blockchain_GettingStarted_hero.png",
           social:{
             enabled: false
           },
@@ -114,7 +114,7 @@ module.exports = {
                     class:" ",
                     mediaObject:{
                            image:{
-                             src:"/images/bullet-check.svg",
+                             src:"/images/blockchain/getting-started-resource-1.png",
                              alt:"First Blockchain app",
                              style:"width:30px;"
                            },
@@ -134,7 +134,7 @@ module.exports = {
                     class:" ",
                     mediaObject:{
                            image:{
-                             src:"/images/bullet-check.svg",
+                             src:"/images/blockchain/getting-started-resource-2.png",
                              alt:"DeveloperWorks",
                              style:"width:30px;"
                            },
@@ -167,7 +167,7 @@ module.exports = {
                   {
                     mediaObject:{
                            image:{
-                             src:"/images/bullet-check.svg",
+                             src:"/images/blockchain/getting-started-resource-3.png",
                              alt:"IBM Blockchain and z Systems",
                              style:"width:30px;"
                            },
@@ -224,7 +224,7 @@ module.exports = {
                         url:"https://www.youtube.com/watch?v=B2eYh2Y7rJw",
                         id:"B2eYh2Y7rJw",
                         type:"youtube",
-                        img:"/images/blockchain/fpo.svg",
+                        img:"/images/blockchain/getting-started-instance-1.png",
                       },
                       subhead:"Commercial paper app on Blockchain",
                       text:"See how a commercial paper trading network can be implemented with a blockchain network.",
@@ -257,7 +257,7 @@ module.exports = {
                         url:"https://youtu.be/IgNfoQQ5Reg",
                         id:"IgNfoQQ5Reg",
                         type:"youtube",
-                        img:"/images/blockchain/fpo.svg",
+                        img:"/images/blockchain/getting-started-instance-2.png",
                       },
                       subhead:"Car lease demo",
                       text:"Watch a sample supply chain process between multiple parties using IBM Blockchain",
@@ -285,7 +285,7 @@ module.exports = {
                       },
                     {
                       image:{
-                        src:"/images/blockchain/fpo.svg",
+                        src:"/images/blockchain/getting-started-instance-3.png",
                         alt:"image alt text"
                       },
                       subhead:"Marbles sample application",

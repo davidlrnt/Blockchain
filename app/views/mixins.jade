@@ -1004,12 +1004,12 @@ mixin launchBlockchain
                     a.ibm-btn-sec.ibm-btn-white(href='/blockchain/getting-started') Get started now
 
 mixin gettingStartedChainCode
-  .ibm-band.ibm-padding-top-3.ibm-padding-bottom-1.ibm-background-white-core.home-developers-section(style='')
+  .ibm-band.ibm-padding-top-3.ibm-padding-bottom-1.ibm-background-white-core.home-developers-section(style='background: #FFFFFF url(/images/blockchain/getting-started-Bluemix-garage-bg.png) center center no-repeat; background-size:cover;')
     .ibm-columns(data-widget='setsameheight', data-items='.ibm-col-6-3')
       .ibm-col-6-3.developers-col-2
         //.ibm-col-5-2.ibm-center-block(style='box-sizing: border-box; padding: 50px 0px 0px 80px; background: url("/images/blockchain/home-developers-card-bg.jpg") center center / cover no-repeat rgb(255, 255, 255);')
-        .ibm-col-5-2.ibm-center-block.ibm-padding-top-r1
-          img.ibm-resize(src="/images/blockchain/home-developers-card-bg.jpg")
+        .ibm-col-5-2.ibm-col-medium-6-3.ibm-center-block.ibm-padding-top-r1
+          img.ibm-resize(src="/images/blockchain/getting-started-Bluemix-garage.png")
       .ibm-col-6-3.ibm-padding-top-2
         p.ibm-bold IBM BLUEMIX GARAGE FOR BLOCKCHAIN
         h3.ibm-h3.ibm-padding-top-1
@@ -1020,7 +1020,7 @@ mixin gettingStartedChainCode
 
 
 mixin gettingStartedDevelopers
-  .ibm-band.ibm-padding-top-3.ibm-padding-bottom-3.ibm-background-blue-50.ibm-alternate-background.home-developers-section(style='')
+  .ibm-band.ibm-padding-top-3.ibm-padding-bottom-3.ibm-background-blue-50.ibm-alternate-background.home-developers-section(style='background: #FFFFFF url(/images/blockchain/getting-started-offer-bg.png) center center no-repeat; background-size:cover;')
     .ibm-columns(data-widget='setsameheight', data-items='.ibm-col-6-3')
       .ibm-col-6-3
         img.ibm-resize(src='/images/blockchain/Bluemix-logo.png', style='width:40px;height:40px;', alt='Bluemix logo')
@@ -1029,17 +1029,14 @@ mixin gettingStartedDevelopers
         p.ibm-button-link.ibm-padding-top-1
           a.ibm-btn-sec.ibm-btn-white(href='##__ReplaceWithOfferPage__##', target='_blank') Try IBM Blockchain
       .ibm-col-6-3.developers-col-2
-        //.ibm-col-5-2.ibm-center-block(style='box-sizing: border-box; padding: 50px 0px 0px 80px; background: url("/images/blockchain/home-developers-card-bg.jpg") center center / cover no-repeat rgb(255, 255, 255);')
-        .ibm-col-5-2.ibm-center-block.ibm-padding-top-r1(style=' background: url("/images/blockchain/home-developers-card-bg.jpg") center center / cover no-repeat rgb(255, 255, 255);display:flex;')
+        .ibm-col-5-2.ibm-center-block.ibm-padding-top-r1
           .ibm-col-4-1.ibm-center-block
             //h3.ibm-textcolor-white-core.ibm-custom-padding-top-10 Here are a few examples:
             ul.ibm-padding-top-r1.ibm-padding-bottom-r1
               li.ibm-textcolor-white-core.ibm-custom-padding-bottom-10 Hyperledger fabric source code
               li.ibm-textcolor-white-core.ibm-custom-padding-bottom-10 IBM Blockchain on Bluemix
               li.ibm-textcolor-white-core.ibm-custom-padding-bottom-10
-                | Docker images deployed to IBM Cloud
-                br
-                | with LinuxONE and z Systems mainframes
+                | Docker images deployed to IBM Cloud with LinuxONE and z Systems mainframes
 
 
 mixin gridGettingStartedBlockchain
